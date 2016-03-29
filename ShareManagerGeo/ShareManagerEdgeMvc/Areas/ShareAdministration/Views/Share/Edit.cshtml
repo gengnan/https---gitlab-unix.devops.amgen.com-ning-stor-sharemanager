@@ -1,0 +1,217 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsShare
+@using ShareManagerEdgeMvc.Helpers;
+@using ShareManagerEdgeMvc.Models;
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+  }
+
+<h2>Edit</h2>
+<p>You will not be able to set the Share as In Service if Owner group is not configured or groups configured are not in the OU and domain selected.<br /></p>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Share Details</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CifsShareID)
+        @Html.HiddenFor(model => model.CreatedOnDateTime)
+        @Html.HiddenFor(model => model.CreatedBy)
+        @Html.HiddenFor(model => model.ModifiedOnDateTime)
+        @Html.HiddenFor(model => model.ModifiedBy)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OuID, "OuID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("OuID")
+                @Html.ValidationMessageFor(model => model.OuID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CmdbCi, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CmdbCi)
+                @Html.ValidationMessageFor(model => model.CmdbCi)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UncPath, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    var uncpath = ViewData["UncPath"] as String;
+                    
+
+                    if (string.IsNullOrEmpty(uncpath) )
+                    { 
+                        @Html.EditorFor(model => model.UncPath)
+                        @Html.ValidationMessageFor(model => model.UncPath)
+                    }
+                    else
+                    {
+                        @Html.HiddenFor(model => model.UncPath)
+                        @Html.DisplayFor(model => model.UncPath)
+                    }   
+                    
+                    
+                }
+                                
+                @*@Html.EditorFor(model => model.UncPath)
+                @Html.ValidationMessageFor(model => model.UncPath)*@
+                   
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ParentShareId, "Parent Share", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    var parentId = ViewData["ParentShareSelect"];
+                    
+                    @Html.DropDownList("ParentShareId", string.Empty)
+                    
+                    @*@Html.DropDownList("ParentShareId", string.Empty)*@
+                    
+                }
+                
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.IsFsrShare, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.CheckBoxFor(model => model.IsFsrShare)
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ShareOwnerFunctionalArea, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ShareOwnerFunctionalArea)
+                @Html.ValidationMessageFor(model => model.ShareOwnerFunctionalArea)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ShareOwnerCostCenter, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ShareOwnerCostCenter)
+                @Html.ValidationMessageFor(model => model.ShareOwnerCostCenter)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OwnerGroup, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    var gkgroup = ViewData["OwnerGroup"] as String;
+                    if (string.IsNullOrEmpty(gkgroup) || ViewBag.isSiteAdmin)
+                    {
+                        @Html.EditorFor(model => model.OwnerGroup)
+                        @Html.ValidationMessageFor(model => model.OwnerGroup)
+                    }
+                    else
+                    {
+                        @Html.HiddenFor(model => model.OwnerGroup)
+                        @Html.DisplayFor(model => model.OwnerGroup)
+                    }
+                }
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReadOnlyGroup, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    var rogroup = ViewData["ReadOnlyGroup"] as String;
+                    if (string.IsNullOrEmpty(rogroup) || ViewBag.isSiteAdmin)
+                    {
+                        @Html.EditorFor(model => model.ReadOnlyGroup)
+                        @Html.ValidationMessageFor(model => model.ReadOnlyGroup)
+                    }
+                    else
+                    {
+                        @Html.HiddenFor(model => model.ReadOnlyGroup)
+                        @Html.DisplayFor(model => model.ReadOnlyGroup)
+                    }
+                }
+ 
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReadWriteGroup, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    var rwgroup = ViewData["ReadWriteGroup"] as String;
+                    if (string.IsNullOrEmpty(rwgroup) || ViewBag.isSiteAdmin)
+                    {
+                        @Html.EditorFor(model => model.ReadWriteGroup)
+                        @Html.ValidationMessageFor(model => model.ReadWriteGroup)
+                    }
+                    else
+                    {
+                        @Html.HiddenFor(model => model.ReadWriteGroup)
+                        @Html.DisplayFor(model => model.ReadWriteGroup)
+                    }
+                }
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoChangeGroup, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    var ncgroup = ViewData["NoChangeGroup"] as String;
+                    
+                    if (string.IsNullOrEmpty(ncgroup) || ViewBag.isSiteAdmin)
+                    {
+                        @Html.EditorFor(model => model.NoChangeGroup)
+                        @Html.ValidationMessageFor(model => model.NoChangeGroup)
+                    }
+                    else
+                    {
+                        @Html.HiddenFor(model => model.NoChangeGroup)
+                        @Html.DisplayFor(model => model.NoChangeGroup)
+                    }
+                }
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Status")
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

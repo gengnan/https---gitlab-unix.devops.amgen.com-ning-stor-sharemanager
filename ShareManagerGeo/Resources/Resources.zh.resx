@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutLinkText" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="AboutPageContent" xml:space="preserve">
+    <value>本Share Manager应用为取代处于软件生存末期的GateKeeper ASP应用而设计研发。 我们以保证服务质量与用户体验为目标不懈努力。</value>
+  </data>
+  <data name="SmbAdminContent" xml:space="preserve">
+    <value>如果你是SMB共享文件夹管理员, 点击下方按钮跳转至SMB管理区并向Share Manager添加新SMB共享文件夹或管理现有SMB共享文件夹。</value>
+  </data>
+  <data name="SmbAdminHeading" xml:space="preserve">
+    <value>SMB管理员</value>
+  </data>
+  <data name="AliasesList" xml:space="preserve">
+    <value>分号分隔Windows登陆用户名清单</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Share Manager</value>
+  </data>
+  <data name="ChooseYourLanguage" xml:space="preserve">
+    <value>选择您希望使用的语言</value>
+  </data>
+  <data name="CmdbCi" xml:space="preserve">
+    <value>配置管理数据库配置项</value>
+  </data>
+  <data name="CmdbCiRequired" xml:space="preserve">
+    <value>配置管理数据库配置项为必填项</value>
+  </data>
+  <data name="ContactLinkText" xml:space="preserve">
+    <value>联系方式</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>联系我们</value>
+  </data>
+  <data name="CopyRightBy" xml:space="preserve">
+    <value>AHS - Storage and Backup</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>创建人</value>
+  </data>
+  <data name="CreatedOnDateTime" xml:space="preserve">
+    <value>创建于</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Email为必填</value>
+  </data>
+  <data name="GettingStartedContent" xml:space="preserve">
+    <value>欢迎使用Share Manager. 这里为您提供管理SMB文件夹的一站式服务.</value>
+  </data>
+  <data name="GettingStartedHeading" xml:space="preserve">
+    <value>入门指南</value>
+  </data>
+  <data name="HomeLinkText" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>最后编辑人</value>
+  </data>
+  <data name="ModifiedOnDateTime" xml:space="preserve">
+    <value>最后编辑于</value>
+  </data>
+  <data name="NoChangeGroup" xml:space="preserve">
+    <value>只读致谢组</value>
+  </data>
+  <data name="OneFiftyLength" xml:space="preserve">
+    <value>必须少于150个字符</value>
+  </data>
+  <data name="OrganizationalUnit" xml:space="preserve">
+    <value>组织单位</value>
+  </data>
+  <data name="OrganizationalUnitRequired" xml:space="preserve">
+    <value>组织单位为必填</value>
+  </data>
+  <data name="OuSelectList" xml:space="preserve">
+    <value>OU (Resolver Group - Domain)</value>
+  </data>
+  <data name="OwnerGroup" xml:space="preserve">
+    <value>所有者组</value>
+  </data>
+  <data name="OwnerGroupRequired" xml:space="preserve">
+    <value>所有者组为必填</value>
+  </data>
+  <data name="ReadOnlyGroup" xml:space="preserve">
+    <value>只读组</value>
+  </data>
+  <data name="ReadOnlyGroupRequired" xml:space="preserve">
+    <value>只读组为必填</value>
+  </data>
+  <data name="ReadWriteGroup" xml:space="preserve">
+    <value>读写组</value>
+  </data>
+  <data name="ReadWriteGroupRequired" xml:space="preserve">
+    <value>读写组为必填</value>
+  </data>
+  <data name="ResolverGroup" xml:space="preserve">
+    <value>服务提供组</value>
+  </data>
+  <data name="ResolverGroupRequired" xml:space="preserve">
+    <value>服务提供组为必填</value>
+  </data>
+  <data name="SelectListNull" xml:space="preserve">
+    <value>-- 请选择 --</value>
+  </data>
+  <data name="SeventyFiveLength" xml:space="preserve">
+    <value>必须少于75个字符</value>
+  </data>
+  <data name="ShareAdminIndexPageTitle" xml:space="preserve">
+    <value>共享文件夹管理列表</value>
+  </data>
+  <data name="ShareDomain" xml:space="preserve">
+    <value>AD域</value>
+  </data>
+  <data name="ShareName" xml:space="preserve">
+    <value>共享文件夹名称</value>
+  </data>
+  <data name="ShareNameRequired" xml:space="preserve">
+    <value>共享文件夹名称为必填</value>
+  </data>
+  <data name="ShareOwner" xml:space="preserve">
+    <value>所有者</value>
+  </data>
+  <data name="ShareOwnerCostCenter" xml:space="preserve">
+    <value>所有者部门</value>
+  </data>
+  <data name="ShareOwnerCostCenterRequired" xml:space="preserve">
+    <value>所有者部门为必填</value>
+  </data>
+  <data name="ShareOwnerFunctionalArea" xml:space="preserve">
+    <value>所有者功能领域</value>
+  </data>
+  <data name="ShareOwnerFunctionalAreaRequired" xml:space="preserve">
+    <value>所有者功能领域为必填</value>
+  </data>
+  <data name="ShareUsersContent" xml:space="preserve">
+    <value>查看你有权访问的共享文件夹列表。 如果你是共享文件夹所有者，在此浏览你所管理的共享文件夹以及批准或驳回权限请求。</value>
+  </data>
+  <data name="ShareUsersHeading" xml:space="preserve">
+    <value>SMB共享文件夹</value>
+  </data>
+  <data name="SixtyFourLength" xml:space="preserve">
+    <value>必须少于65个字符</value>
+  </data>
+  <data name="TwentyFiveLength" xml:space="preserve">
+    <value>必须少于25个字符</value>
+  </data>
+  <data name="TwoFiftyLength" xml:space="preserve">
+    <value>必须少于250个字符</value>
+  </data>
+  <data name="UncPath" xml:space="preserve">
+    <value>UNC路径(访问路径)</value>
+  </data>
+  <data name="UncPathRequired" xml:space="preserve">
+    <value>UNC路径为必填</value>
+  </data>
+  <data name="UserAlias" xml:space="preserve">
+    <value>用户替代名(Windows登录名)</value>
+  </data>
+  <data name="UserAliasRequired" xml:space="preserve">
+    <value>用户替代名为必填</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>用户名为必填</value>
+  </data>
+  <data name="WelcomeHeading" xml:space="preserve">
+    <value>欢迎</value>
+  </data>
+  <data name="YammerContactLoginHeading" xml:space="preserve">
+    <value>你可以从下方登陆以查看或发布帖子于AHS - Storage and Backup Yammer组。 如果你以登陆，你会看到AHS - Storage and Backup Yammer组的更新.</value>
+  </data>
+  <data name="YammerEmailHeading" xml:space="preserve">
+    <value>使用Email在我们的Yammer发布新帖子:</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>创建新项目</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>详细</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>添加新项目</value>
+  </data>
+  <data name="AddNewShare" xml:space="preserve">
+    <value>添加新共享文件夹</value>
+  </data>
+  <data name="ClearSearch" xml:space="preserve">
+    <value>清空搜索框</value>
+  </data>
+  <data name="FindByName" xml:space="preserve">
+    <value>根据名字查找:</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="OneHundredLength" xml:space="preserve">
+    <value>必须少于100个字符</value>
+  </data>
+  <data name="TenTwentyFourLength" xml:space="preserve">
+    <value>必须少于1024个字符</value>
+  </data>
+  <data name="SmbShareListHeading" xml:space="preserve">
+    <value>SMB共享文件夹</value>
+  </data>
+  <data name="SmbSharePermListPageHeader" xml:space="preserve">
+    <value>SMB共享文件夹权限页</value>
+  </data>
+  <data name="PermissionType" xml:space="preserve">
+    <value>权限请求已发送</value>
+  </data>
+  <data name="RequestAccess" xml:space="preserve">
+    <value>请求权限</value>
+  </data>
+  <data name="RequestedByUserName" xml:space="preserve">
+    <value>请求提交者</value>
+  </data>
+  <data name="RequestedForUserName" xml:space="preserve">
+    <value>请求对象</value>
+  </data>
+  <data name="RequestJustification" xml:space="preserve">
+    <value>请求理由</value>
+  </data>
+  <data name="RequestJustificationRequired" xml:space="preserve">
+    <value>请求理由为必填</value>
+  </data>
+  <data name="RequestOpenedOnDateTime" xml:space="preserve">
+    <value>请求提交于</value>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="RequestStatusMsg" xml:space="preserve">
+    <value>状态信息</value>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>添加或删除</value>
+  </data>
+  <data name="OpenRequestCountHeading" xml:space="preserve">
+    <value>请求提交人用户替代名</value>
+  </data>
+  <data name="RequestedForUserAlias" xml:space="preserve">
+    <value>请求对象用户替代名</value>
+  </data>
+  <data name="OpenRequestsHeading" xml:space="preserve">
+    <value>未处理请求</value>
+  </data>
+  <data name="NoOpenRequestContent" xml:space="preserve">
+    <value>您目前没有任何作为请求提交人或请求提交对象的未处理请求。</value>
+  </data>
+  <data name="OpenRequestContent" xml:space="preserve">
+    <value>以下请求有您作为为请求提交人或请求提交对象：</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>页</value>
+  </data>
+  <data name="SearchByNameCiOrPath" xml:space="preserve">
+    <value>查找(按名字，UNC路径或配置管理数据库配置项):</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="BothAdmin" xml:space="preserve">
+    <value>共享文件夹及存储管理员</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>完成</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>失败</value>
+  </data>
+  <data name="GK" xml:space="preserve">
+    <value>所有者、批准人</value>
+  </data>
+  <data name="InService" xml:space="preserve">
+    <value>正在运行</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>只读只写</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>脱机</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>未处理</value>
+  </data>
+  <data name="OutOfService" xml:space="preserve">
+    <value>停止运行</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Retired" xml:space="preserve">
+    <value>退役</value>
+  </data>
+  <data name="RO" xml:space="preserve">
+    <value>只读</value>
+  </data>
+  <data name="RW" xml:space="preserve">
+    <value>读写</value>
+  </data>
+  <data name="ShareAdmin" xml:space="preserve">
+    <value>共享文件夹管理员</value>
+  </data>
+  <data name="SiteAdmin" xml:space="preserve">
+    <value>网站管理员</value>
+  </data>
+  <data name="StorageAdmin" xml:space="preserve">
+    <value>存储管理员</value>
+  </data>
+  <data name="NoRequestCountContent" xml:space="preserve">
+    <value>您目前没有任何未处理权限请求。</value>
+  </data>
+  <data name="NoRequestCountHeading" xml:space="preserve">
+    <value>无未处理请求</value>
+  </data>
+  <data name="OpenRequestCountContent1" xml:space="preserve">
+    <value>您有</value>
+  </data>
+  <data name="OpenRequestCountContent2" xml:space="preserve">
+    <value>个待处理请求</value>
+  </data>
+  <data name="RequestCountHeading" xml:space="preserve">
+    <value>您有未处理请求</value>
+  </data>
+  <data name="RequestedByUserAlias" xml:space="preserve">
+    <value>请求提交人用户替代名</value>
+  </data>
+  <data name="UnknownItem" xml:space="preserve">
+    <value>未知项目</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="RequestClosedOnDateTime" xml:space="preserve">
+    <value>请求完成于</value>
+  </data>
+  <data name="CreateNewRequestButton" xml:space="preserve">
+    <value>创建新权限请求</value>
+  </data>
+  <data name="EnterKeyDisabled" xml:space="preserve">
+    <value>回车键在本页面被禁用</value>
+  </data>
+  <data name="OneAlias" xml:space="preserve">
+    <value>Only One Alias per Request is supported at this time.</value>
+  </data>
+  <data name="SmbShare" xml:space="preserve">
+    <value>SMB共享文件夹</value>
+  </data>
+  <data name="SmbShareOpenRequests" xml:space="preserve">
+    <value>此共享文件夹的未处理请求</value>
+  </data>
+  <data name="SubmitRequest" xml:space="preserve">
+    <value>提交请求</value>
+  </data>
+  <data name="Denied" xml:space="preserve">
+    <value>请求被驳回</value>
+  </data>
+  <data name="BrowseAvailableShares" xml:space="preserve">
+    <value>浏览可用共享文件夹</value>
+  </data>
+  <data name="CompletedRequests" xml:space="preserve">
+    <value>已完成请求</value>
+  </data>
+  <data name="MyRequests" xml:space="preserve">
+    <value>我的请求</value>
+  </data>
+  <data name="OpenRequestLink" xml:space="preserve">
+    <value>浏览我的请求</value>
+  </data>
+  <data name="ClosedBy" xml:space="preserve">
+    <value>完成人</value>
+  </data>
+  <data name="AdHelperErrorMsg" xml:space="preserve">
+    <value>AD Helper错误信息</value>
+  </data>
+  <data name="AndApproveOrDenyRequest" xml:space="preserve">
+    <value>并批准或驳回该请求.</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>批准</value>
+  </data>
+  <data name="ApproveDenyRequestPageHeading" xml:space="preserve">
+    <value>批准或驳回请求</value>
+  </data>
+  <data name="ApproveRequest" xml:space="preserve">
+    <value>批准请求</value>
+  </data>
+  <data name="DenyRequest" xml:space="preserve">
+    <value>驳回请求</value>
+  </data>
+  <data name="EmailClosingP1" xml:space="preserve">
+    <value>查询关于该共享文件夹最新信息及您的权限</value>
+  </data>
+  <data name="EmailClosingP2" xml:space="preserve">
+    <value>&lt;p&gt;如果您的权限有任何问题，请于以下网址提交服务请求 &lt;a href=\"https://amgen.service-now.com/navpage.do\"&gt;ISM-SN&lt;/a&gt; to</value>
+  </data>
+  <data name="EmailClosingP3" xml:space="preserve">
+    <value>以解决问题。&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;祝好,&lt;/br&gt;Share Manager小组&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="ForLowerCase" xml:space="preserve">
+    <value>为了</value>
+  </data>
+  <data name="PleaseGoTo" xml:space="preserve">
+    <value>请至</value>
+  </data>
+  <data name="RequestApprovalStatus" xml:space="preserve">
+    <value>批准、驳回</value>
+  </data>
+  <data name="RequestApproved" xml:space="preserve">
+    <value>请求批准</value>
+  </data>
+  <data name="RequestCompleted" xml:space="preserve">
+    <value>请求完成</value>
+  </data>
+  <data name="RequestCompletedEmail" xml:space="preserve">
+    <value>以下请求已完成:</value>
+  </data>
+  <data name="RequestDenied" xml:space="preserve">
+    <value>请求驳回</value>
+  </data>
+  <data name="RequestDetails" xml:space="preserve">
+    <value>请求详细信息</value>
+  </data>
+  <data name="RequestMade" xml:space="preserve">
+    <value>以下请求已生成:</value>
+  </data>
+  <data name="RequestPending" xml:space="preserve">
+    <value>待处理请求</value>
+  </data>
+  <data name="StatusNotificationTextBox" xml:space="preserve">
+    <value>请求状态用户通知</value>
+  </data>
+  <data name="StatusNotificationTextBoxExplanation" xml:space="preserve">
+    <value>如果您想告知用户请求驳回原因，请使用下方文本框:</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>祝好,&lt;/br&gt;Share Manager小组</value>
+  </data>
+  <data name="ViewShareDetails" xml:space="preserve">
+    <value>浏览共享文件夹详细信息</value>
+  </data>
+  <data name="BackToShareDetails" xml:space="preserve">
+    <value>返回浏览共享文件夹详细信息</value>
+  </data>
+  <data name="BackToSharesList" xml:space="preserve">
+    <value>返回浏览共享文件夹列表</value>
+  </data>
+  <data name="NcMembers" xml:space="preserve">
+    <value>只读只写(无修改删除权限)权限组成员</value>
+  </data>
+  <data name="NoCompletedRequestsForShare" xml:space="preserve">
+    <value>此共享文件夹无未完成或失败请求</value>
+  </data>
+  <data name="OwnersMembers" xml:space="preserve">
+    <value>共享文件夹所有者(请求批准人)</value>
+  </data>
+  <data name="RoMembers" xml:space="preserve">
+    <value>只读权限组成员</value>
+  </data>
+  <data name="RwMembers" xml:space="preserve">
+    <value>读写权限组成员</value>
+  </data>
+  <data name="ShareDetails" xml:space="preserve">
+    <value>共享文件夹详细信息</value>
+  </data>
+  <data name="SharesList" xml:space="preserve">
+    <value>共享文件夹列表</value>
+  </data>
+  <data name="ShareUserDetailsPageHeader" xml:space="preserve">
+    <value>共享文件夹详细信息及权限请求</value>
+  </data>
+  <data name="ShareUserDetailsPageTopContent" xml:space="preserve">
+    <value>下拉页面以浏览目前所有者，拥有权限的用户以及未处理和已完成请求。</value>
+  </data>
+  <data name="ToSharesList" xml:space="preserve">
+    <value>至共享文件夹列表</value>
+  </data>
+  <data name="BackToMyRequests" xml:space="preserve">
+    <value>返回我的请求</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>已取消</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>取消请求</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>请求</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>保存修改</value>
+  </data>
+  <data name="AttemptAddUserWhoAlreadyHasAccess" xml:space="preserve">
+    <value>您尝试添加的用户已有该访问权限。</value>
+  </data>
+  <data name="AttemptError" xml:space="preserve">
+    <value>您提交的请求非法。原因为以下之一:</value>
+  </data>
+  <data name="AttemptIdenticalRequest" xml:space="preserve">
+    <value>您尝试创建重复请求。</value>
+  </data>
+  <data name="AttemptRemoveForNonMember" xml:space="preserve">
+    <value>您尝试请求删除的用户并无您请求删除的权限</value>
+  </data>
+  <data name="RequestApprovalNotificationTimeStamp" xml:space="preserve">
+    <value>最近一次通知发送于</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="SecurityGroup" xml:space="preserve">
+    <value>Security Group</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserOrGroup" xml:space="preserve">
+    <value>User or Security Group</value>
+  </data>
+  <data name="SecurityGroupMembers" xml:space="preserve">
+    <value>Security Group Members</value>
+  </data>
+  <data name="IsFsrShare" xml:space="preserve">
+    <value>File Share Registry Share?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ParentShare" xml:space="preserve">
+    <value>Parent Share</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="AttemptInvalidRequest" xml:space="preserve">
+    <value>用户名无效</value>
+  </data>
+</root>

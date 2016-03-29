@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ShareContextConnection-Web.config Connection String" description="ShareContextConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=uslv-ssvc-stor1;Initial Catalog=smdev103;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ning\\Documents\\Source\\ShareManagerMvc\\trunk\\ShareManagerGeo\\ShareManagerEdgeMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShareContextConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ShareManagerEdgeMvc.Models.CifsShareViewModel-Web.config Connection String" description="ShareManagerEdgeMvc.Models.CifsShareViewModel Connection String used in web.config by the application to access the database." defaultValue="ShareManagerEdgeMvc.Models.CifsShareViewModel_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ning\\Documents\\Source\\ShareManagerMvc\\trunk\\ShareManagerGeo\\ShareManagerEdgeMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShareManagerEdgeMvc.Models.CifsShareViewModel']/@connectionString" />
+  </parameter>
+</parameters>

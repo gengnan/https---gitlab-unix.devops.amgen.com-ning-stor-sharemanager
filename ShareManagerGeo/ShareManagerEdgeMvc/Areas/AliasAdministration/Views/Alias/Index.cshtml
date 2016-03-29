@@ -1,0 +1,79 @@
+﻿@model PagedList.IPagedList<ShareManagerEdgeMvc.Models.CifsShareAlias>
+
+@using ShareManagerEdgeMvc.Models;
+
+@using Resources;
+@using PagedList.Mvc;
+
+@*@model IEnumerable<ShareManagerEdgeMvc.Models.CifsShareAlias>*@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.AliasListHeading</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           @* @Html.DisplayNameFor(model => model.PrimaryCifsShareID)*@
+            @Html.ActionLink(@Resources.PrimaryCifsShare, "Index", new { sortOrder = ViewBag.PrimarySortParm, page = Model.PageNumber })
+        </th>
+        <th>
+           @* @Html.DisplayNameFor(model => model.SecondaryCifsShareID)*@
+            @Html.ActionLink(@Resources.SecondaryCifsShare, "Index", new { sortOrder = ViewBag.AliasSortParm, page = Model.PageNumber })
+        </th>
+ @*      <th>
+        @Html.DisplayNameFor(model => model.CreatedOnDateTime)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.CreatedBy)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.ModifiedOnDateTime)
+    </th>
+    <th>
+        @Html.DisplayNameFor(model => model.ModifiedBy)
+    </th>
+*@ 
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryCifsShare.UncPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecondaryCifsShare.UncPath)
+        </td>
+@*        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOnDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedOnDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>
+*@
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CifsShareAliasPairID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CifsShareAliasPairID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CifsShareAliasPairID })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }), PagedListRenderOptions.ClassicPlusFirstAndLast)

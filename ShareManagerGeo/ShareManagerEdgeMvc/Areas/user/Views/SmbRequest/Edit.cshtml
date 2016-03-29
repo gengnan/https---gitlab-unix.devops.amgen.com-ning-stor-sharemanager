@@ -1,0 +1,187 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsPermissionRequest
+@using ShareManagerEdgeMvc.Helpers;
+@using ShareManagerEdgeMvc.Models;
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var share = ViewBag.CifsShare as ShareManagerEdgeMvc.Models.CifsShare;
+}
+<script language="JavaScript">
+    var nav = window.Event ? true : false;
+    if (nav) {
+        window.captureEvents(Event.KEYDOWN);
+        window.onkeydown = NetscapeEventHandler_KeyDown;
+    } else {
+        document.onkeydown = MicrosoftEventHandler_KeyDown;
+    }
+
+    function NetscapeEventHandler_KeyDown(e) {
+        if (e.which == 13 && e.target.type != 'textarea' && e.target.type != 'submit') {
+            return false;
+        }
+        return true;
+    }
+
+    function MicrosoftEventHandler_KeyDown() {
+        if (event.keyCode == 13 && event.srcElement.type != 'textarea' &&
+             event.srcElement.type != 'submit')
+            return false;
+        return true;
+    }
+</script>
+<h2>@Resources.Modify @Resources.Request</h2>
+<br />
+<div>
+    <h4>@Resources.SmbShare</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Resources.ShareName
+        </dt>
+
+        <dd>
+            @share.Name
+        </dd>
+        <dt>
+            @Resources.ShareOwner
+        </dt>
+
+        <dd>
+            @share.Ou.ResolverGroup
+            &#95;
+            @share.Ou.Domain
+        </dd>
+        <dt>
+            @Resources.CmdbCi
+        </dt>
+        <dd>
+            @share.CmdbCi
+        </dd>
+
+        <dt>
+            @Resources.UncPath
+        </dt>
+
+        <dd>
+            @share.UncPath
+        </dd>
+        <dt>
+            @share.Status
+        </dt>
+
+        <dd>
+            @StatusExt.AsDisplayString(@share.Status.Value)
+        </dd>
+
+        <dt>
+            @Resources.CreatedOnDateTime
+        </dt>
+
+        <dd>
+            @share.CreatedOnDateTime
+        </dd>
+
+
+
+
+
+    </dl>
+</div>
+<br />
+
+
+
+
+@using (Html.BeginForm("Edit", "SmbRequest", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>@Resources.RequestDetails</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CifsPermissionRequestID)
+        @Html.HiddenFor(model => model.RequestOpenedOnDateTime)
+        @Html.HiddenFor(model => model.RequestAdPrincipalType)
+        @Html.HiddenFor(model => model.CifsShareID)
+        @Html.HiddenFor(model => model.RequestStatus)
+        @Html.HiddenFor(model => model.RequestStatusMsg)
+        @Html.HiddenFor(model => model.RequestOpenedOnDateTime)
+        @Html.HiddenFor(model => model.RequestedByUserAlias)
+        @Html.HiddenFor(model => model.RequestedByUserName)
+        @Html.HiddenFor(model => model.RequestedForUserAlias)
+        @Html.HiddenFor(model => model.RequestedForUserName)
+        @Html.HiddenFor(model => model.AdHelperErrorMsg)
+        @Html.HiddenFor(model => model.RequestStatusMsg)
+        @Html.HiddenFor(model => model.ClosedByUserAlias)
+        @Html.HiddenFor(model => model.ClosedByUserName)
+        @Html.HiddenFor(model => model.RequestApprovalStatus)
+        @Html.HiddenFor(model => model.RequestClosedOnDateTime)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestType, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RequestType")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PermissionType, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PermissionType")
+            </div>
+        </div>
+
+      
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestJustification, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.RequestJustification, new { @style = "width:500px;height:150px;vertical-align:top;" })
+                @Html.ValidationMessageFor(model => model.RequestJustification)
+            </div>
+        </div>
+
+       
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestedForUserName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.RequestedForUserName)
+                @Html.ValidationMessageFor(model => model.RequestedForUserName)
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestedByUserName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.RequestedByUserName)
+                @Html.ValidationMessageFor(model => model.RequestedByUserName)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @if ((int)@ViewData["PermTypeCount"] != 0)
+                {
+                    <input type="submit" value="@Resources.SaveChanges" class="btn btn-default" />
+                }
+                else
+                {
+                    @Resources.NoGroupConfigured
+                }
+                
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(@Resources.BackToMyRequests, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

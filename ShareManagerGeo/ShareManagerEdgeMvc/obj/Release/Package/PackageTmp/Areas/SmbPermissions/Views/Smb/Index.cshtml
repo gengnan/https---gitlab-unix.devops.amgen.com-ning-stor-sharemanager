@@ -1,0 +1,126 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsShareViewModel
+@using ShareManagerEdgeMvc.Models;
+@using PagedList.Mvc;
+
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = @Resources.SmbSharePermListPageHeader;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-lg-5">
+        <h2>@Resources.SmbShareListHeading</h2>
+        @using (Html.BeginForm())
+        {
+            <p>
+                @Resources.FindByName @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                <input type="submit" value="@Resources.Search" />&nbsp;&nbsp;
+                @Html.ActionLink(@Resources.ClearSearch, "Index")
+            </p>
+        }
+
+        <table class="table">
+            <tr>
+
+                <th>
+                    @Html.ActionLink(@Resources.ShareName, "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter, page = Model.SearchResults.PageNumber })
+                </th>
+                <th>
+                    @Resources.CmdbCi
+                </th>
+                <th>
+                    @Resources.UncPath
+                </th>
+
+                <th>
+                    @Resources.Status
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.SearchResults)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CmdbCi)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UncPath)
+                    </td>
+
+                    <td>
+                           @StatusExt.AsDisplayString(item.Status.Value)
+                    </td>
+                    <td>
+
+                        @Html.ActionLink("Request Permission", "Details", new { id = item.CifsShareID })
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <br />
+        @Resources.Page @(Model.SearchResults.PageCount < Model.SearchResults.PageNumber ? 0 : Model.SearchResults.PageNumber) of @Model.SearchResults.PageCount
+
+        @Html.PagedListPager(Model.SearchResults, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+    </div>
+    <div class="col-lg-5">
+        <h2>@Resources.OpenRequestsHeading</h2>
+        @{
+            if (Model.CifsPermissionRequests.Count() > 0)
+            {
+
+                <p>@Resources.OpenRequestContent</p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Resources.ShareName
+                        </th>
+                        <th>
+                            @Resources.RequestType
+                        </th>
+                        <th>
+                            @Resources.PermissionType
+                        </th>
+                        <th>
+                            @Resources.RequestStatus
+                        </th>
+                        <th></th>
+                    </tr>
+                    @foreach (var item in Model.CifsPermissionRequests)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CifsShare.Name)
+                            </td>
+                            <td>
+                               @RequestTypeExt.AsDisplayString(item.RequestType.Value)
+                            </td>
+                            <td>
+                                @PermissionTypeExt.AsDisplayString(item.PermissionType.Value)
+                            </td>
+                            <td>
+                                @RequestStatusExt.AsDisplayString(item.RequestStatus.Value)
+                            </td>
+                            <td>TODO:: Add link to more details page</td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+
+                <p>@Resources.NoOpenRequestContent</p>
+            }
+        }
+
+    </div>
+</div>
+

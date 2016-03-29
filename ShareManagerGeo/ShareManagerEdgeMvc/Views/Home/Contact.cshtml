@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>@Html.Raw(@Resources.ContactPageContent)</p>
+
+@*<p>@Resources.YammerContactLoginHeading</p>
+<address>
+    <strong>@Resources.YammerEmailHeading</strong>   <a href="mailto:ahs-storageandbackup+amgen.com@yammer.com">ahs-storageandbackup+amgen.com@yammer.com</a><br />
+</address>
+<p>@Resources.YammerContactLoginHeading</p>
+<div id="embedded-feed" style="height:800px;width:400px;"></div>
+<script src="https://assets.yammer.com/assets/platform_embed.js"></script>
+<script>
+ yam.connect.embedFeed({
+     container: "#embedded-feed",
+     network: "amgen.com",
+     feedType: "group",
+     feedId: "4332119"
+ });
+</script>
+*@

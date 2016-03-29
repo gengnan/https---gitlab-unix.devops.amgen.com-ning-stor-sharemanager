@@ -1,0 +1,100 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsPermissionRequest
+@using ShareManagerEdgeMvc.Helpers;
+@using ShareManagerEdgeMvc.Models;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.RequestDetails</h2>
+
+<div>
+    @Html.HiddenFor(model => model.RequestedForUserAlias)
+    @Html.HiddenFor(model => model.RequestedByUserAlias)
+    @Html.HiddenFor(model => model.RequestStatusMsg)
+    @Html.HiddenFor(model => model.RequestClosedOnDateTime)
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CifsShare.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CifsShare.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PermissionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestJustification)
+        </dd>
+        <dt>
+            @Resources.UserOrGroup
+        </dt>
+        <dd>
+            @RequestAdPrincipalTypeExt.AsDisplayString(@Model.RequestAdPrincipalType.Value)
+        </dd>
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedForUserName)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestStatus)
+        </dt>
+
+        <dd>
+            @RequestStatusExt.AsDisplayString(@Model.RequestStatus.Value)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestOpenedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestOpenedOnDateTime)
+        </dd>
+
+     
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(@Resources.Edit, "Edit", new { id = Model.CifsPermissionRequestID }) |
+    @Html.ActionLink(@Resources.HomeLinkText, "Index", "Home", new { area = "" }, null)
+</p>

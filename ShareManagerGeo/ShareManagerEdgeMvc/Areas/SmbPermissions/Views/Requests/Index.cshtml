@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ShareManagerEdgeMvc.Models.CifsPermissionRequest>
+@using ShareManagerEdgeMvc.Models;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CifsShare.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestStatus)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestOpenedOnDateTime)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CifsShare.Name)
+        </td>
+        <td>
+            @PermissionTypeExt.AsDisplayString(item.PermissionType.Value)
+        </td>
+        <td>
+            @RequestTypeExt.AsDisplayString(item.RequestType.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestJustification)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedForUserName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedByUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestStatus)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestOpenedOnDateTime)
+        </td>
+        
+        <td>
+            @Html.ActionLink(@Resources.Modify, "Edit", new { id=item.CifsPermissionRequestID }) |
+            
+            @Html.ActionLink(@Resources.Cancel, "Delete", new { id=item.CifsPermissionRequestID })
+        </td>
+    </tr>
+}
+
+</table>

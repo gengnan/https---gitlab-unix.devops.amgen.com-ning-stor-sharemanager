@@ -1,0 +1,43 @@
+﻿@model ShareManagerEdgeMvc.Models.Ou
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ou</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Domain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Domain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrganizationalUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrganizationalUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResolverGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResolverGroup)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

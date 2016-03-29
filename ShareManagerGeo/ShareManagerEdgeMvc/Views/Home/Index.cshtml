@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var culture = System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToLowerInvariant();
+}
+@helper selected(string c, string culture)
+{
+    if (c == culture)
+    {
+        @:Selected="true"
+    }
+}
+<div class="jumbotron">
+    <h1>@Resources.ApplicationName</h1>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Resources.WelcomeHeading</h2>
+        <p>
+            @*@Resources.GettingStartedContent*@
+            @Html.Raw(Resources.GettingStartedContent)
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>@Resources.ShareUsersHeading</h2>
+        <p>@Html.Raw(Resources.ShareUsersContent)</p>
+        <p>@Html.ActionLink(@Resources.BrowseAvailableShares, "Index", "SmbShares", new { area = "user" }, new { @class = "btn btn-default" })</p>
+        @{
+            if ((int)@ViewData["OpenRequestCount"] > 0)
+            {
+                <h3>@Resources.RequestCountHeading</h3>
+                <p>@Resources.OpenRequestCountContent1 <b>@ViewData["OpenRequestCount"].ToString()</b> @Resources.OpenRequestCountContent2</p>
+                <p>@Html.ActionLink(@Resources.OpenRequestLink, "Index", "SmbRequest", new { area = "user" }, new { @class = "btn btn-default" })</p>
+            }
+            else
+            {
+                <h3>@Resources.NoRequestCountHeading</h3>
+                <p>@Resources.NoRequestCountContent</p>            
+            }
+        }
+        @*
+            TODO: Change this to the link to the Share List for Users/Owners
+        *@
+       
+        
+    </div>
+    @* This if statement makes the content below conditional if the user is an admin. *@
+    @if ((bool)@ViewData["IsShareAdmin"] || (bool)@ViewData["IsSiteAdmin"])
+    { 
+    <div class="col-md-4">
+        <h2>@Resources.SmbAdminHeading</h2>
+        <p>@Resources.SmbAdminContent</p>
+        @*
+        TODO: Change this to the link to the Admin home page - Done? 
+        *@
+        <p>@Html.ActionLink("Share Administration", "Index", "Share", new { area = "ShareAdministration" }, new { @class = "btn btn-default" })</p>
+        
+    </div>
+    }
+    @* This if statement makes the content below conditional if the user is an admin. *@
+    @if ((bool)@ViewData["IsShareAdmin"] || (bool)@ViewData["IsSiteAdmin"])
+    { 
+    <div class="col-md-4">
+        <h2>@Resources.AliasAdminHeading</h2>
+        <p>@Resources.AliasAdminContent</p>
+        @*
+        TODO: Change this to the link to the Admin home page
+        *@
+        <p>@Html.ActionLink("Alias Administration", "Index", "Alias", new { area = "AliasAdministration" }, new { @class = "btn btn-default" })</p>
+        
+    </div>
+    }
+</div>
+@if ((bool)@ViewData["IsSiteAdmin"]) {
+<div class="row">
+    
+        <div class="col-md-4">
+            <h2>Site Administration</h2>
+            <p>Follow the link below to add and remove and edit administrative users.</p>
+            <p>@Html.ActionLink("Administer Site Users", "Index", "Admin", new { area = "SiteAdministration" }, new { @class = "btn btn-default" })</p>
+        </div>
+    
+</div>
+}
+<br />
+<br />
+<div class="row">
+    @using (Html.BeginForm("SetCulture", "Home"))
+    {
+
+        <fieldset>
+            <legend>@Resources.ChooseYourLanguage</legend>
+            <select id="Culture" name="Culture">
+                <option @selected("en-us", culture) value="en-us">English</option>
+                <option @selected("zh", culture) value="zh">Chinese</option>
+                <option @selected("es", culture) value="es">Spanish</option>
+            </select>
+        </fieldset>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        (function ($) {
+            $("#Culture").change(function () {
+                $(this).parents("form").submit(); // post form
+            });
+
+        })(jQuery);
+    </script>
+}
+<br />
+<br />
+<br />

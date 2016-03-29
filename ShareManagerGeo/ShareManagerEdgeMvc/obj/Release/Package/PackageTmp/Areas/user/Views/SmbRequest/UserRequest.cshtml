@@ -1,0 +1,306 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsPermissionRequest
+@using ShareManagerEdgeMvc.Helpers;
+@using ShareManagerEdgeMvc.Models;
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var share = ViewData["CifsShareData"] as ShareManagerEdgeMvc.Models.CifsShare;
+    var alreadymember = false;
+    if( ViewData["UserAlreadyHasAccess"] != null)
+    { 
+        alreadymember = (bool)ViewData["UserAlreadyHasAccess"]; 
+    }
+
+    
+    
+}
+<script language="JavaScript">
+    var nav = window.Event ? true : false;
+    if (nav) {
+        window.captureEvents(Event.KEYDOWN);
+        window.onkeydown = NetscapeEventHandler_KeyDown;
+    } else {
+        document.onkeydown = MicrosoftEventHandler_KeyDown;
+    }
+
+    function NetscapeEventHandler_KeyDown(e) {
+        if (e.which == 13 && e.target.type != 'textarea' && e.target.type != 'submit') {
+            return false;
+        }
+        return true;
+    }
+
+    function MicrosoftEventHandler_KeyDown() {
+        if (event.keyCode == 13 && event.srcElement.type != 'textarea' &&
+             event.srcElement.type != 'submit')
+            return false;
+        return true;
+    }
+</script>
+<h2>@Resources.RequestAccess (@Resources.User)</h2>
+<div>
+    <h4>@Resources.SmbShare</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Resources.ShareName
+        </dt>
+
+        <dd>
+            @share.Name
+        </dd>
+        <dt>
+            @Resources.UncPath
+        </dt>
+
+        <dd>
+            @share.UncPath
+        </dd>
+        <dt>
+            @Resources.DomainName
+        </dt>
+
+        <dd>
+            @share.Ou.Domain
+        </dd>
+        <dt>
+            @Resources.ResolverGroup
+        </dt>
+
+        <dd>
+            @share.Ou.ResolverGroup
+        </dd>
+
+
+  <!--      <dt>
+            @share.Status
+        </dt>
+
+        <dd>
+            @StatusExt.AsDisplayString(@share.Status.Value)
+        </dd>
+-->
+        <dt>
+            @Resources.FunctionName
+        </dt>
+
+        <dd>
+            @share.ShareOwnerFunctionalArea
+        </dd>
+        <dt>
+            @Resources.CostCenter
+        </dt>
+
+        <dd>
+            @share.ShareOwnerCostCenter
+        </dd>
+
+
+
+
+
+    </dl>
+</div>
+
+<div class="row">
+    @* Row 1 *@
+    <div class="col-sm-6">
+        @* col 1*@
+        <h4>@Resources.OwnersMembers</h4>
+        <hr />
+        @{
+            var owners = ViewData["Owners"] as List<ShareManagerEdgeMvc.Helpers.AdUser>;
+            if (owners != null && owners.Count() > 0)
+            {
+                <ul>
+
+                    @foreach (var item in owners)
+                    {
+
+                        <li>@item.UserName (@item.UserAlias)</li>
+
+                    }
+                </ul>
+
+            }
+        }
+    </div>
+    <div class="col-sm-6">
+        @* col 2*@
+
+        <h4>@Resources.RoMembers</h4>
+        <hr />
+        @{
+            var readers = ViewData["Readers"] as List<ShareManagerEdgeMvc.Helpers.AdGroupMember>;
+            if (readers != null && readers.Count() > 0)
+            {
+                <ul>
+
+                    @foreach (var item in readers)
+                    {
+                        if (string.IsNullOrEmpty(item.GroupName))
+                        {
+                            <li>@item.UserName (@item.UserAlias)</li>
+                        }
+                        else
+                        {
+                            <li>@item.UserName (@item.UserAlias)</li>
+                        }
+
+
+                    }
+                </ul>
+
+            }
+        }
+    </div>
+</div> @*End Row 2*@
+<br />
+<div class="row">
+    @* Row 3 *@
+    <div class="col-sm-6">
+        <h4>@Resources.RwMembers</h4>
+        <hr />
+        @{
+            var writers = ViewData["Writers"] as List<ShareManagerEdgeMvc.Helpers.AdGroupMember>;
+            if (writers != null && writers.Count() > 0)
+            {
+                <ul>
+
+                    @foreach (var item in writers)
+                    {
+
+                        if (string.IsNullOrEmpty(item.GroupName))
+                        {
+                            <li>@item.UserName (@item.UserAlias)</li>
+                        }
+                        else
+                        {
+                            <li>@item.UserName (@item.UserAlias)</li>
+                        }
+
+                    }
+                </ul>
+
+            }
+        }
+
+    </div>
+
+    @{
+        var nochangers = ViewData["NoChangers"] as List<ShareManagerEdgeMvc.Helpers.AdGroupMember>;
+        string ncgroup = ViewData["ncgroupname"] as string;
+        if ((nochangers != null && nochangers.Count() > 0)||(!string.IsNullOrEmpty(ncgroup)))
+        {
+            <div class="col-sm-6">
+                <h4>@Resources.NcMembers</h4>
+                <hr />
+                <ul>
+
+                    @foreach (var item in nochangers)
+                    {
+
+                        if (string.IsNullOrEmpty(item.GroupName))
+                        {
+                            <li>@item.UserName (@item.UserAlias)</li>
+                        }
+                        else
+                        {
+                            <li>@item.UserName (@item.UserAlias) </li>
+                        }
+
+                    }
+                </ul>
+            </div>
+        }
+    }
+</div>@* end row 3*@
+<br />
+
+<br />
+@{
+    if(alreadymember)
+    {
+        <table>
+            <tr>
+                <td><img src="~/content/important.png" style="height:50px;width:50px" /></td>
+                <td>
+                    @Resources.AttemptError
+                    <ul>
+                        <li>@Resources.AttemptEmptyOwnerRequest</li>
+                        <li>@Resources.AttemptRemoveLastOnwer</li>
+                        <li>@Resources.AttemptInvalidUser</li>
+                        <li>@Resources.AttemptIdenticalRequest</li>
+                        <li>@Resources.AttemptAddUserWhoAlreadyHasAccess</li>
+                        <li>@Resources.AttemptRemoveForNonMember</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <br />
+    }
+}
+@using (Html.BeginForm("UserRequest", "SmbRequest", FormMethod.Post, new { @id = ViewBag.CifsShareID }))
+{
+    
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.RequestAdPrincipalType)
+    @Html.HiddenFor(model => model.CifsShareID)
+    <div class="form-horizontal">
+        <h4>@Resources.RequestAccess (@Resources.User)</h4>
+        <p>@Resources.EnterKeyDisabled</p>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestType, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RequestType")
+                @Html.ValidationMessageFor(model => model.RequestType)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PermissionType, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("PermissionType")
+                @Html.ValidationMessageFor(model => model.PermissionType)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label(@Resources.UserAlias, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.RequestedForUserAlias, new { @Value = @User.Identity.Name }) 
+                @Html.ValidationMessageFor(model => model.RequestedForUserAlias)
+            </div>
+            <div class="col-md-10">
+                @Resources.OneAlias
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestJustification, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.RequestJustification, new { @style = "width:500px;height:150px;vertical-align:top;" })
+                @Html.ValidationMessageFor(model => model.RequestJustification)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+@if ((int)@ViewData["PermTypeCount"]!=0)
+    {
+                <input type="submit" value="@Resources.SubmitRequest" class="btn btn-default" />
+    }
+    else
+{
+    @Resources.NoGroupConfigured
+}
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(@Resources.BackToShareDetails, "Details", "SmbShares", new { id = share.CifsShareID }, null)
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

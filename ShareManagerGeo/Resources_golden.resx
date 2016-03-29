@@ -1,0 +1,824 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutLinkText" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutPageContent" xml:space="preserve">
+    <value>Share Manager is an application that manages access to Amgen’s file shares instead of requestors submitting a Service Request to Service-Now.  It allows file share owners and access requestors a self-service option for this activity.&lt;br /&gt;&lt;br /&gt;
+
+It is a web-based application so you can access it from your web browser at &lt;a href="http:\\sharemanager.amgen.com"&gt;http:\\sharemanager.amgen.com&lt;/a&gt;. Share Manager supports access updates to a file share or a share sub-folder. &lt;br /&gt;&lt;br /&gt;
+
+The Share Manager application is designed and developed to replace the current service catalog access request for existing network file shares, and to replace the aging GateKeeper application that has reached End of Life. &lt;br /&gt;&lt;br /&gt;
+
+
+&lt;strong&gt;HOW IT WORKS:&lt;/strong&gt;&lt;br /&gt;
+The access request goes directly to the approver after you submit it, eliminating the wait time for an IS resolver to look up approver information.  Following access approval, Share Manager automatically grants access, eliminating wait time for an IS resolver to perform the access update task.  A “restart” is required to allow the new access to taken effect.&lt;br /&gt;&lt;br /&gt;
+
+&lt;strong&gt;TIP FOR FILE SHARE OWNERS:&lt;/strong&gt;&lt;br /&gt;
+As a file share owner, if you will be out of the office, make sure you assign an appropriate delegate so that Share Manager will route all requests to you and your delegate.  &lt;br /&gt;&lt;br /&gt;
+
+
+&lt;strong&gt;TIP FOR END USER:&lt;/strong&gt;&lt;br /&gt;
+As soon as the share owner approves your request, your access is immediately ready.  To ensure that the latest access update has taken effect, a &lt;b&gt; restart is required &lt;/b&gt;.&lt;br /&gt;&lt;br /&gt;
+
+Interested? Want to find out more? visit &lt;a href="https://myteams.amgen.com/sites/ahs-storage/sharemanager/Pages/Home.aspx"&gt;Share Manager Help Center&lt;/a&gt;. We look forward to your comments and feedback! Post them on the &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Lists/Questions%20and%20Feedbacks/AllItems.aspx"&gt;discussion board&lt;/a&gt;.</value>
+  </data>
+  <data name="SmbAdminContent" xml:space="preserve">
+    <value>If you are an SMB Administrator, click below to go to the SMB Administration area and Add new SMB shares to Share Manager or manage existing SMB shares.</value>
+  </data>
+  <data name="SmbAdminHeading" xml:space="preserve">
+    <value>SMB Administrators</value>
+  </data>
+  <data name="AliasesList" xml:space="preserve">
+    <value>Semi-colon delimited list of Windows login credentials</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Share Manager</value>
+  </data>
+  <data name="ChooseYourLanguage" xml:space="preserve">
+    <value>Choose Your Preferred Language</value>
+  </data>
+  <data name="CmdbCi" xml:space="preserve">
+    <value>CMDB CI</value>
+  </data>
+  <data name="CmdbCiRequired" xml:space="preserve">
+    <value>CMDB CI is required</value>
+  </data>
+  <data name="ContactLinkText" xml:space="preserve">
+    <value>Feedback &amp; Contact</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="CopyRightBy" xml:space="preserve">
+    <value>AHS - Storage and Backup</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="CreatedOnDateTime" xml:space="preserve">
+    <value>Created On</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Email is Required</value>
+  </data>
+  <data name="GettingStartedContent" xml:space="preserve">
+    <value>Welcome to the self-service Share Manager tool.  This tool can be used by anyone at Amgen to:&lt;br /&gt;
+- Request access to a network file share or shared folder&lt;br /&gt;
+- See who owns a particular file share or shared folder&lt;br /&gt;
+And for File Share Owners to:&lt;br /&gt;
+- Manage access to the file shares and folders you own.</value>
+  </data>
+  <data name="GettingStartedHeading" xml:space="preserve">
+    <value>Getting Started</value>
+  </data>
+  <data name="HomeLinkText" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Last Modified By</value>
+  </data>
+  <data name="ModifiedOnDateTime" xml:space="preserve">
+    <value>Last Modified On</value>
+  </data>
+  <data name="NoChangeGroup" xml:space="preserve">
+    <value>No Change Group</value>
+  </data>
+  <data name="OneFiftyLength" xml:space="preserve">
+    <value>Must be less than 150 characters</value>
+  </data>
+  <data name="OrganizationalUnit" xml:space="preserve">
+    <value>Organizational Unit</value>
+  </data>
+  <data name="OrganizationalUnitRequired" xml:space="preserve">
+    <value>Organization Unit is required</value>
+  </data>
+  <data name="OuSelectList" xml:space="preserve">
+    <value>OU (Resolver Group - Domain)</value>
+  </data>
+  <data name="OwnerGroup" xml:space="preserve">
+    <value>Owner Group</value>
+  </data>
+  <data name="OwnerGroupRequired" xml:space="preserve">
+    <value>Owner Group is required</value>
+  </data>
+  <data name="ReadOnlyGroup" xml:space="preserve">
+    <value>Read Only Group</value>
+  </data>
+  <data name="ReadOnlyGroupRequired" xml:space="preserve">
+    <value>Read Only Group is required</value>
+  </data>
+  <data name="ReadWriteGroup" xml:space="preserve">
+    <value>Read/Write Group</value>
+  </data>
+  <data name="ReadWriteGroupRequired" xml:space="preserve">
+    <value>Read/Write Security Group is required</value>
+  </data>
+  <data name="ResolverGroup" xml:space="preserve">
+    <value>Resolver Group</value>
+  </data>
+  <data name="ResolverGroupRequired" xml:space="preserve">
+    <value>Resolver Group is required</value>
+  </data>
+  <data name="SelectListNull" xml:space="preserve">
+    <value>-- Select an Item --</value>
+  </data>
+  <data name="SeventyFiveLength" xml:space="preserve">
+    <value>Must be less than 75 characters</value>
+  </data>
+  <data name="ShareAdminIndexPageTitle" xml:space="preserve">
+    <value>Share Administration List</value>
+  </data>
+  <data name="ShareDomain" xml:space="preserve">
+    <value>AD Domain</value>
+  </data>
+  <data name="ShareName" xml:space="preserve">
+    <value>Share Name</value>
+  </data>
+  <data name="ShareNameRequired" xml:space="preserve">
+    <value>Share Name is required</value>
+  </data>
+  <data name="ShareOwner" xml:space="preserve">
+    <value>Owner</value>
+  </data>
+  <data name="ShareOwnerCostCenter" xml:space="preserve">
+    <value>Owner Cost Center</value>
+  </data>
+  <data name="ShareOwnerCostCenterRequired" xml:space="preserve">
+    <value>Owner Cost Center is required</value>
+  </data>
+  <data name="ShareOwnerFunctionalArea" xml:space="preserve">
+    <value>Owner Functional Area</value>
+  </data>
+  <data name="ShareOwnerFunctionalAreaRequired" xml:space="preserve">
+    <value>Owner Functional Area is required</value>
+  </data>
+  <data name="ShareUsersContent" xml:space="preserve">
+    <value>For all Amgen users, view the list of network file shares or shared folders that are being managed by this tool.&lt;br /&gt;
+For share owners, find the shares you manage and approve or deny permission requests.&lt;br /&gt;
+If you do not see a particular file share or shared folder listed, please request it to be added  &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Lists/Add%20Shares%20to%20Share%20Manager/AllItems.aspx"&gt;here&lt;/a&gt;.</value>
+  </data>
+  <data name="ShareUsersHeading" xml:space="preserve">
+    <value>Network File Shares</value>
+  </data>
+  <data name="SixtyFourLength" xml:space="preserve">
+    <value>Must be less than 65 characters</value>
+  </data>
+  <data name="TwentyFiveLength" xml:space="preserve">
+    <value>Must be less than 25 characters</value>
+  </data>
+  <data name="TwoFiftyLength" xml:space="preserve">
+    <value>Must be less than 250 characters</value>
+  </data>
+  <data name="UncPath" xml:space="preserve">
+    <value>Access Path</value>
+  </data>
+  <data name="UncPathRequired" xml:space="preserve">
+    <value>Access (UNC) Path is required</value>
+  </data>
+  <data name="UserAlias" xml:space="preserve">
+    <value>User Alias (Windows Login)</value>
+  </data>
+  <data name="UserAliasRequired" xml:space="preserve">
+    <value>User Alias is required</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>User name is required</value>
+  </data>
+  <data name="WelcomeHeading" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="YammerContactLoginHeading" xml:space="preserve">
+    <value>You can Login Below to View or Post a Message to our AHS - Storage and Backup Yammer Group. If you are already logged in. You should see our AHS - Storage and Backup Yammer feed.</value>
+  </data>
+  <data name="YammerEmailHeading" xml:space="preserve">
+    <value>Post a Message to our Yammer Group using Email:</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="AddNewShare" xml:space="preserve">
+    <value>Add New Share</value>
+  </data>
+  <data name="ClearSearch" xml:space="preserve">
+    <value>Clear Search</value>
+  </data>
+  <data name="FindByName" xml:space="preserve">
+    <value>Find by name:</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="OneHundredLength" xml:space="preserve">
+    <value>Must be less than 100 characters</value>
+  </data>
+  <data name="TenTwentyFourLength" xml:space="preserve">
+    <value>Must be less than 1024 characters</value>
+  </data>
+  <data name="SmbShareListHeading" xml:space="preserve">
+    <value>Network File Shares</value>
+  </data>
+  <data name="SmbSharePermListPageHeader" xml:space="preserve">
+    <value>SMB Shares Permissions Page</value>
+  </data>
+  <data name="PermissionType" xml:space="preserve">
+    <value>Permission Requested</value>
+  </data>
+  <data name="RequestAccess" xml:space="preserve">
+    <value>Request Access</value>
+  </data>
+  <data name="RequestedByUserName" xml:space="preserve">
+    <value>Request Submitted By</value>
+  </data>
+  <data name="RequestedForUserName" xml:space="preserve">
+    <value>Requested For</value>
+  </data>
+  <data name="RequestJustification" xml:space="preserve">
+    <value>Request Justification</value>
+  </data>
+  <data name="RequestJustificationRequired" xml:space="preserve">
+    <value>A Request Justification is Required</value>
+  </data>
+  <data name="RequestOpenedOnDateTime" xml:space="preserve">
+    <value>Request Submitted On</value>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="RequestStatusMsg" xml:space="preserve">
+    <value>Approver Comments</value>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>Add or Remove</value>
+  </data>
+  <data name="OpenRequestCountHeading" xml:space="preserve">
+    <value>Requested by User Alias</value>
+  </data>
+  <data name="RequestedForUserAlias" xml:space="preserve">
+    <value>Requested for User Alias</value>
+  </data>
+  <data name="OpenRequestsHeading" xml:space="preserve">
+    <value>Open Requests</value>
+  </data>
+  <data name="NoOpenRequestContent" xml:space="preserve">
+    <value>You current have NO open requests either submitted by your or submitted on your behalf.</value>
+  </data>
+  <data name="OpenRequestContent" xml:space="preserve">
+    <value>You have the following requests that you have submitted or were submitted on your behalf.</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="SearchByNameCiOrPath" xml:space="preserve">
+    <value>Search by (Name, UNC Path, or CMDB CI):</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="BothAdmin" xml:space="preserve">
+    <value>Share and Storage Administrator</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="GK" xml:space="preserve">
+    <value>Owner/Approver</value>
+  </data>
+  <data name="InService" xml:space="preserve">
+    <value>In Service</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>No Change</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="OutOfService" xml:space="preserve">
+    <value>Out of Service</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Retired" xml:space="preserve">
+    <value>Retired</value>
+  </data>
+  <data name="RO" xml:space="preserve">
+    <value>Read Only</value>
+  </data>
+  <data name="RW" xml:space="preserve">
+    <value>Read/Write</value>
+  </data>
+  <data name="ShareAdmin" xml:space="preserve">
+    <value>Share Administrator</value>
+  </data>
+  <data name="SiteAdmin" xml:space="preserve">
+    <value>Site Administrator</value>
+  </data>
+  <data name="StorageAdmin" xml:space="preserve">
+    <value>Storage Administrator</value>
+  </data>
+  <data name="NoRequestCountContent" xml:space="preserve">
+    <value>You currently don't have any open permission requests.</value>
+  </data>
+  <data name="NoRequestCountHeading" xml:space="preserve">
+    <value>No Open Request</value>
+  </data>
+  <data name="OpenRequestCountContent1" xml:space="preserve">
+    <value>You have</value>
+  </data>
+  <data name="OpenRequestCountContent2" xml:space="preserve">
+    <value>request(s) pending. </value>
+  </data>
+  <data name="RequestCountHeading" xml:space="preserve">
+    <value>You Have Open Requests</value>
+  </data>
+  <data name="RequestedByUserAlias" xml:space="preserve">
+    <value>Requested By User Alias</value>
+  </data>
+  <data name="UnknownItem" xml:space="preserve">
+    <value>Unkown Item</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="RequestClosedOnDateTime" xml:space="preserve">
+    <value>Owner Completed On</value>
+  </data>
+  <data name="CreateNewRequestButton" xml:space="preserve">
+    <value>Create New Access Request</value>
+  </data>
+  <data name="EnterKeyDisabled" xml:space="preserve">
+    <value>The ENTER key is disabled on this page.</value>
+  </data>
+  <data name="OneAlias" xml:space="preserve">
+    <value>Only One Alias per Request is supported at this time.</value>
+  </data>
+  <data name="SmbShare" xml:space="preserve">
+    <value>Network File Shares and Folders</value>
+  </data>
+  <data name="SmbShareOpenRequests" xml:space="preserve">
+    <value>Open Requests for this Share</value>
+  </data>
+  <data name="SubmitRequest" xml:space="preserve">
+    <value>Submit Request</value>
+  </data>
+  <data name="Denied" xml:space="preserve">
+    <value>Request Denied</value>
+  </data>
+  <data name="BrowseAvailableShares" xml:space="preserve">
+    <value>Browse Available Shares</value>
+  </data>
+  <data name="CompletedRequests" xml:space="preserve">
+    <value>Completed Requests</value>
+  </data>
+  <data name="MyRequests" xml:space="preserve">
+    <value>My Requests</value>
+  </data>
+  <data name="OpenRequestLink" xml:space="preserve">
+    <value>See My Requests</value>
+  </data>
+  <data name="ClosedBy" xml:space="preserve">
+    <value>Approver</value>
+  </data>
+  <data name="AdHelperErrorMsg" xml:space="preserve">
+    <value>SysMsg for Developer</value>
+  </data>
+  <data name="AndApproveOrDenyRequest" xml:space="preserve">
+    <value>and either Approve or Deny this request.</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="ApproveDenyRequestPageHeading" xml:space="preserve">
+    <value>Approve or Deny Request</value>
+  </data>
+  <data name="ApproveRequest" xml:space="preserve">
+    <value>Approve Request</value>
+  </data>
+  <data name="DenyRequest" xml:space="preserve">
+    <value>Deny Request</value>
+  </data>
+  <data name="EmailClosingP1" xml:space="preserve">
+    <value>For the latest information about this share and to check your permissions, </value>
+  </data>
+  <data name="EmailClosingP2" xml:space="preserve">
+    <value>&lt;p&gt;If you have any problems with your permissions, please file a Service Request in &lt;a href="https://amgen.service-now.com/navpage.do"&gt;Service-Now&lt;/a&gt; and choose </value>
+  </data>
+  <data name="EmailClosingP3" xml:space="preserve">
+    <value>as your resolver group.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;Thank you,&lt;/br&gt;The Share Manager Team&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="ForLowerCase" xml:space="preserve">
+    <value>for</value>
+  </data>
+  <data name="PleaseGoTo" xml:space="preserve">
+    <value>Share owners please click this link:</value>
+  </data>
+  <data name="RequestApprovalStatus" xml:space="preserve">
+    <value>Approve/Deny</value>
+  </data>
+  <data name="RequestApproved" xml:space="preserve">
+    <value>Request Approved</value>
+  </data>
+  <data name="RequestCompleted" xml:space="preserve">
+    <value>Request Completed</value>
+  </data>
+  <data name="RequestCompletedEmail" xml:space="preserve">
+    <value>The following Request was completed:</value>
+  </data>
+  <data name="RequestDenied" xml:space="preserve">
+    <value>Request Denied</value>
+  </data>
+  <data name="RequestDetails" xml:space="preserve">
+    <value>Request Details</value>
+  </data>
+  <data name="RequestMade" xml:space="preserve">
+    <value>The following Request has been made:</value>
+  </data>
+  <data name="RequestPending" xml:space="preserve">
+    <value>Approval/Denial Pending for Access Request to</value>
+  </data>
+  <data name="StatusNotificationTextBox" xml:space="preserve">
+    <value>Request Status User Notification</value>
+  </data>
+  <data name="StatusNotificationTextBoxExplanation" xml:space="preserve">
+    <value>If you would like to notify the user as to why the request was denied, use the text box below:</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>Thank you,&lt;/br&gt;The Share Manager Team</value>
+  </data>
+  <data name="ViewShareDetails" xml:space="preserve">
+    <value>View Share Details</value>
+  </data>
+  <data name="BackToShareDetails" xml:space="preserve">
+    <value>Back to Share Details</value>
+  </data>
+  <data name="BackToSharesList" xml:space="preserve">
+    <value>Back to Shares List</value>
+  </data>
+  <data name="NcMembers" xml:space="preserve">
+    <value>No Change (No Modify) Share Members</value>
+  </data>
+  <data name="NoCompletedRequestsForShare" xml:space="preserve">
+    <value>There are no completed or failed requests for this share.</value>
+  </data>
+  <data name="OwnersMembers" xml:space="preserve">
+    <value>Share Owners/ Approvers</value>
+  </data>
+  <data name="RoMembers" xml:space="preserve">
+    <value>Read Only Users</value>
+  </data>
+  <data name="RwMembers" xml:space="preserve">
+    <value>Read/Write Users</value>
+  </data>
+  <data name="ShareDetails" xml:space="preserve">
+    <value>Share Details</value>
+  </data>
+  <data name="SharesList" xml:space="preserve">
+    <value>Shares List</value>
+  </data>
+  <data name="ShareUserDetailsPageHeader" xml:space="preserve">
+    <value>Share Details and Access Requests</value>
+  </data>
+  <data name="ShareUserDetailsPageTopContent" xml:space="preserve">
+    <value>Scroll down to view current Owners and users with access as well as Open requests and Completed requests.</value>
+  </data>
+  <data name="ToSharesList" xml:space="preserve">
+    <value>To Shares List</value>
+  </data>
+  <data name="BackToMyRequests" xml:space="preserve">
+    <value>Back to My Requests</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Request Cancelled</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>Cancel Request</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="AttemptAddUserWhoAlreadyHasAccess" xml:space="preserve">
+    <value>You attempted to request access for a user who already has the access you requested.</value>
+  </data>
+  <data name="AttemptError" xml:space="preserve">
+    <value>The request you just submitted was invalid. One of the following conditions caused the error:</value>
+  </data>
+  <data name="AttemptIdenticalRequest" xml:space="preserve">
+    <value>You attempted to create an identical request.</value>
+  </data>
+  <data name="AttemptRemoveForNonMember" xml:space="preserve">
+    <value>You attempted to request removal for a user who doesn't have the permissions you tried to remove.</value>
+  </data>
+  <data name="RequestApprovalNotificationTimeStamp" xml:space="preserve">
+    <value>Latest Request Notification Sent On</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="SecurityGroup" xml:space="preserve">
+    <value>Security Group</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserOrGroup" xml:space="preserve">
+    <value>User or Security Group</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="OneGroup" xml:space="preserve">
+    <value>Only One Group Name per Request is supported at this time. Example name, test-sharemgmt_nestedgroup.</value>
+  </data>
+  <data name="SecurityGroupMembers" xml:space="preserve">
+    <value>Security Group Members</value>
+  </data>
+  <data name="IsFsrShare" xml:space="preserve">
+    <value>Is a File Share Registry Share?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ParentShare" xml:space="preserve">
+    <value>Parent Share</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="AttemptInvalidUser" xml:space="preserve">
+    <value>User alias is not valid.</value>
+  </data>
+  <data name="AttemptInvalidGroup" xml:space="preserve">
+    <value>Group name is not valid or not in the same domain as the share.</value>
+  </data>
+  <data name="CostCenter" xml:space="preserve">
+    <value>Cost Center</value>
+  </data>
+  <data name="FunctionName" xml:space="preserve">
+    <value>Functional Area</value>
+  </data>
+  <data name="DomainName" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="ShareOwnerGroupRequired" xml:space="preserve">
+    <value>Share owner group is requried</value>
+  </data>
+  <data name="ShareUNCPathsRequired" xml:space="preserve">
+    <value>Share UNC path is required</value>
+  </data>
+  <data name="AttemptEmptyOwnerRequest" xml:space="preserve">
+    <value>No share owner is identified, thus access request is not allowed.</value>
+  </data>
+  <data name="AttemptRemoveLastOnwer" xml:space="preserve">
+    <value>You are trying to remove the last share owner.</value>
+  </data>
+  <data name="ReNotify" xml:space="preserve">
+    <value>Re-Notify Approvers</value>
+  </data>
+  <data name="ReNotifyConfirmed" xml:space="preserve">
+    <value>Notification of your request has been resent to approvers. Please check your email inbox.</value>
+  </data>
+  <data name="ReNotifyNotConfirmed" xml:space="preserve">
+    <value>Notification of your request CAN NOT been resent to approvers. Please contact ShareManager team for help.</value>
+  </data>
+  <data name="Approver" xml:space="preserve">
+    <value>Approver</value>
+  </data>
+  <data name="NoGroupConfigured" xml:space="preserve">
+    <value>RO, RW or NC group is not configured for this share thus access requet is not allowed</value>
+  </data>
+  <data name="ContactPageContent" xml:space="preserve">
+   <value>Share Manager team is working very hard to ensure quality of the tool, service and experience for our customers.&lt;br /&gt;&lt;br /&gt;
+
+Site Contact information and a Questions submission form are located on the left panel of the &lt;a href="https://myteams.amgen.com/sites/ahs-storage/sharemanager/Pages/Home.aspx"&gt;Share Manager Help Center&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;
+
+Specifict Questions:&lt;br /&gt;
+&lt;UL&gt;
+&lt;li&gt;I cann't find the file share I own or need access to. Submit a request &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Lists/Add%20Shares%20to%20Share%20Manager/AllItems.aspx"&gt;here&lt;/a&gt; to have it added.&lt;/li&gt;
+&lt;li&gt;I don't want to use Share Manager for my file share anymore. Submit a request &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Lists/Remove%20Shares%20from%20Share%20Manager/AllItems.aspx"&gt;here&lt;/a&gt; to have it removed.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;If your request is completed, but you still cannot access the share&lt;/strong&gt;, you'll need to reboot your computer for your new access to become effective.&lt;/li&gt;&lt;/UL&gt;
+&lt;br /&gt;&lt;br /&gt;
+We look forward to your comments and feedback! Post them on the &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Lists/Questions%20and%20Feedbacks/AllItems.aspx"&gt;discussion board&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;
+
+
+
+
+
+
+
+
+If your request received a error message from Share Manager, please log a incident with IS-Storage team in &lt;a href="https://amgen.service-now.com/"&gt;Service-Now&lt;/a&gt;. For other inquries, please submit a Service Request to IS-Storage in &lt;a href="https://amgen.service-now.com/"&gt;Service-Now&lt;/a&gt;. &lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="UseLinkText" xml:space="preserve">
+    <value>How To</value>
+  </data>
+  <data name="UsePageApproveAccess" xml:space="preserve">
+    <value>As an share owner, you want to approve an access request:</value>
+  </data>
+  <data name="UsePageContent" xml:space="preserve">
+    <value>This is content</value>
+  </data>
+  <data name="UsePageReference" xml:space="preserve">
+    <value>This page shows you how to: &lt;br /&gt;
+- Submit a access request if you are an Amgen user&lt;br /&gt;
+- Approve an access request if you are an approver. &lt;br /&gt;
+For a request to &lt;b&gt;change ownership&lt;/b&gt;, please use &lt;a href="https://amgen.service-now.com/"&gt;Service-Now&lt;/a&gt;. &lt;br/&gt;For complete instructions, please see the &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Shared%20Documents/Share%20Manager%20Quick%20Reference%20Guide.pdf"&gt;Share Manager Quick Reference Guide&lt;/a&gt;.</value>
+  </data>
+  <data name="UsePageRequestAccess" xml:space="preserve">
+    <value>As an Amgen user, you want to request access to a share:</value>
+  </data>
+  <data name="ApproverNoDecision" xml:space="preserve">
+    <value>Please provide a decision before submit the request</value>
+  </data>
+  <data name="EmailClosingRestart" xml:space="preserve">
+    <value>Please reboot your computer for latest access to take effective.</value>
+  </data>
+  <data name="ShareDetailDisclaimer" xml:space="preserve">
+    <value>* Please note: the user list may not reflect complete user access list. Before using this information for any auditing purpose, please contact IS-Storage and confirm.</value>
+  </data>
+  <data name="ActionRequired" xml:space="preserve">
+    <value>[Action Required]</value>
+  </data>
+  <data name="ImmediateActionRequired" xml:space="preserve">
+    <value>Please &lt;b&gt;&lt;u&gt;take action on this request immediately&lt;/u&gt;&lt;/b&gt; as this is the only automated notification you will receive from the Share Manager tool.&lt;br/&gt;[Note to the Requestor: It is your responsibility to follow-up directly with the Owner as needed.]</value>
+  </data>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>For More Information:</value>
+  </data>
+  <data name="MoreInfoContent" xml:space="preserve">
+    <value>&lt;ul&gt;
+&lt;li&gt;Learn how to use the Share Manager tool in the &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/_layouts/WordViewer.aspx?id=/sites/AHS-Storage/sharemanager/Shared%20Documents/Share%20Manager%20Quick%20Reference%20Guide.pdf&amp;Source=https%3A%2F%2Fmyteams%2Eamgen%2Ecom%2Fsites%2FAHS-Storage%2Fsharemanager%2FShared%2520Documents%2FForms%2FAllItems%2Easpx%3FInitialTabId%3DRibbon%252ELibrary%26VisibilityContext%3DWSSTabPersistence&amp;DefaultItemOpen=1"&gt;Share Manager Quick Reference Guide&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Visit the &lt;a href="https://myteams.amgen.com/sites/ILMP/FileShareService/default.aspx"&gt;Network File Share Service website&lt;/a&gt; to learn about your &lt;a href="https://myteams.amgen.com/sites/ILMP/FileShareService/SiteWebPages/FileShareResponsibilities.aspx"&gt;Responsibilties&lt;/a&gt;, &lt;a href="https://myteams.amgen.com/sites/ILMP/FileShareService/FileShareFAQs/Wiki%20Pages/Home.aspx"&gt;FAQs&lt;/a&gt;, and access &lt;a href="https://myteams.amgen.com/sites/ILMP/FileShareService/SiteWebPages/ToolsResources.aspx"&gt;Learning Center&lt;/a&gt; and other helpful guidance materials and tools.&lt;/li&gt;
+&lt;li&gt;Please note that the Share Manager is the new tool for file share permission management and it is the new tool separate from Service Catalog requests. Click &lt;a href="http://sharemanager.amgen.com"&gt;here&lt;/a&gt; to access the Share Manager tool and &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Pages/Home.aspx"&gt;here&lt;/a&gt; to access Share Manager Help Center.&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="RequestEmailBrief" xml:space="preserve">
+    <value>You are the Owner/Gatekeeper of the below listed Network Shared Folder (File Share).  A request  was submitted in the Share Manager* tool is pending your approval and cannot proceed until you take action.</value>
+  </data>
+  <data name="WhatToDo" xml:space="preserve">
+    <value>What You Need to Do:</value>
+  </data>
+  <data name="WhatToKnow" xml:space="preserve">
+    <value>What You Need to Know (Request Details)</value>
+  </data>
+  <data name="ADModifyFailure" xml:space="preserve">
+    <value>Failed Modification</value>
+  </data>
+
+
+
+  <data name="NotFineYourShare" xml:space="preserve">
+
+    <value>Not finding what you are looking for? Submit a request &lt;a href="https://myteams.amgen.com/sites/AHS-Storage/sharemanager/Lists/Add%20Shares%20to%20Share%20Manager/AllItems.aspx"&gt;here&lt;/a&gt; to have it added.</value>
+  </data>
+</root>

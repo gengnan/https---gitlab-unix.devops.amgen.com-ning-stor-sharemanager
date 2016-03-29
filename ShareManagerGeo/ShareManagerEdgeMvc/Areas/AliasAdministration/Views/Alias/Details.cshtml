@@ -1,0 +1,67 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsShareAlias
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CifsShareAlias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryCifsShareID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryCifsShare.UncPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondaryCifsShareID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondaryCifsShare.UncPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOnDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOnDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CifsShareAliasPairID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

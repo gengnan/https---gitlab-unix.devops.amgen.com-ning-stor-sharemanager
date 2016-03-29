@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ShareManagerTest" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ning\\Documents\\Source\\ShareManagerMvc\\trunk\\ShareManagerGeo\\ShareManagerEdgeMvc\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\ning\\Documents\\Source\\ShareManagerMvc\\trunk\\ShareManagerGeo\\ShareManagerEdgeMvc\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ShareContextConnection-Web.config Connection String" description="" value="Data Source=uslv-ssvc-stor1;Initial Catalog=smdev103;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ning\\Documents\\Source\\ShareManagerMvc\\trunk\\ShareManagerGeo\\ShareManagerEdgeMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShareContextConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ShareManagerEdgeMvc.Models.CifsShareViewModel-Web.config Connection String" description="" value="ShareManagerEdgeMvc.Models.CifsShareViewModel_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ning\\Documents\\Source\\ShareManagerMvc\\trunk\\ShareManagerGeo\\ShareManagerEdgeMvc\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShareManagerEdgeMvc.Models.CifsShareViewModel']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,140 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsPermissionRequest
+@using ShareManagerEdgeMvc.Models;
+@using ShareManagerEdgeMvc.Helpers;
+@using Resources;
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var madeDecision = true;
+    if (ViewData["OwnerMadeDeicison"] != null)
+    {
+        madeDecision = (bool)ViewData["OwnerMadeDeicison"];
+    }
+}
+
+<h2>@Resources.ApproveDenyRequestPageHeading</h2>
+
+<div>
+    <h4>@Resources.RequestDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CifsShare.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CifsShare.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CifsShare.UncPath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CifsShare.UncPath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </dt>
+        <dd>
+            @PermissionTypeExt.AsDisplayString(Model.PermissionType.Value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </dt>
+        <dd>
+            @RequestTypeExt.AsDisplayString(Model.RequestType.Value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RequestJustification)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RequestedForUserName) (@Html.DisplayFor(model => model.RequestedForUserAlias))
+        </dd>
+       <!-- @{
+            if (ViewBag.RequestForMembers != null)
+            {
+                <dt></dt>
+                <dd>
+                    <ul>
+                        @foreach (var user in ViewBag.RequestForMembers as List<AdUser>)
+                        {
+                            <li>@user.UserName</li>
+                        }
+                    </ul>
+                </dd>
+            }
+        }
+        -->
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByUserName) (@Html.DisplayFor(model => model.RequestedByUserAlias))
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestOpenedOnDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RequestOpenedOnDateTime)
+        </dd>
+    </dl>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.CifsPermissionRequestID)
+    @Html.HiddenFor(model => model.CifsShareID)
+    @Html.HiddenFor(model => model.CifsShare)
+    @Html.HiddenFor(model => model.CifsShare.Ou)
+    @Html.HiddenFor(model => model.RequestedByUserAlias)
+    @Html.HiddenFor(model => model.RequestedByUserName)
+    @Html.HiddenFor(model => model.RequestedForUserAlias)
+    @Html.HiddenFor(model => model.RequestedForUserName)
+    @Html.HiddenFor(model => model.RequestOpenedOnDateTime)
+    @Html.HiddenFor(model => model.RequestAdPrincipalType)
+    @Html.HiddenFor(model => model.RequestJustification)
+    @Html.HiddenFor(model => model.RequestStatus)
+    @Html.HiddenFor(model => model.PermissionType)
+    @Html.HiddenFor(model => model.RequestType)
+    <h3>@Resources.ApproveDenyRequestPageHeading</h3>
+    <p><b>@Resources.StatusNotificationTextBox</b></p>
+    <p>@Resources.StatusNotificationTextBoxExplanation</p>
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestStatusMsg, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.RequestStatusMsg, new { @style = "width:500px;height:150px;vertical-align:top;" })
+                @Html.ValidationMessageFor(model => model.RequestStatusMsg)
+             </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RequestApprovalStatus, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("RequestApprovalStatus", string.Empty)
+                @Html.ValidationMessageFor(model => model.RequestApprovalStatus)
+            </div>
+        </div>
+@{
+    if (!madeDecision)
+    {
+        <p>@Resources.ApproverNoDecision</p>
+    }
+    }
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="@Resources.SubmitRequest" class="btn btn-default" />
+                <p><br />
+                    @Html.ActionLink(@Resources.BackToShareDetails, "Details", "SmbShares",  new { area = "user", id = Model.CifsShareID }, null)
+        </p>
+    </div>
+</div>
+</div>
+}
+

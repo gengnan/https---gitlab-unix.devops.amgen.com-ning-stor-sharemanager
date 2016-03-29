@@ -1,0 +1,144 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsPermissionRequest
+@using ShareManagerEdgeMvc.Models;
+@using ShareManagerEdgeMvc.Helpers;
+@using Resources;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.RequestAccess</h2>
+
+<div>
+    <h4>@Resources.Completed</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CifsShare.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CifsShare.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CifsShare.UncPath)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CifsShare.UncPath)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </dt>
+
+        <dd>
+            @PermissionTypeExt.AsDisplayString(Model.PermissionType.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </dt>
+
+        <dd>
+            @RequestTypeExt.AsDisplayString(Model.RequestType.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestJustification)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedForUserName) (@Html.DisplayFor(model => model.RequestedForUserAlias))
+        </dd>
+
+        <!--@{
+            if (ViewBag.RequestForMembers != null)
+            {
+                <dt></dt>
+                <dd><ul>
+                    @foreach (var user in ViewBag.RequestForMembers as List<AdUser>)
+                    {
+                        <li>@user.UserName</li>
+                    }
+                </ul></dd>
+            }
+}
+            -->
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByUserName) (@Html.DisplayFor(model => model.RequestedByUserAlias))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestStatusMsg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestStatusMsg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestApprovalStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestApprovalStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestOpenedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestOpenedOnDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestClosedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestClosedOnDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClosedByUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClosedByUserName) (@Html.DisplayFor(model => model.ClosedByUserAlias))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdHelperErrorMsg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdHelperErrorMsg)
+        </dd>
+
+    </dl>
+
+
+
+</div>
+<p>@Html.ActionLink(@Resources.BackToShareDetails, "Details", "SmbShares" , new { area = "user", id = Model.CifsShareID} , null)</p>

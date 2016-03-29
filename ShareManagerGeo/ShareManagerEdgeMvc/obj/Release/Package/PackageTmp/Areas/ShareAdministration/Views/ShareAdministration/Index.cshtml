@@ -1,0 +1,122 @@
+﻿@model PagedList.IPagedList<ShareManagerEdgeMvc.Models.CifsShare>
+@using PagedList.Mvc;
+@using ShareManagerEdgeMvc.Models;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = @Resources.ShareAdminIndexPageTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+<br>
+<p>
+    @Html.ActionLink(@Resources.AddNewShare, "Create", new { area = "ShareAdministration" }, new { @class = "btn btn-default" })
+</p>
+<br>
+
+
+        @using (Html.BeginForm("Index", "ShareAdministration", FormMethod.Get))
+        {
+            <p>
+                @Resources.FindByName @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                <input type="submit" value="@Resources.Search" />&nbsp;&nbsp;
+                @Html.ActionLink(@Resources.ClearSearch, "Index")
+            </p>
+        }
+    
+    
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.ActionLink(@Resources.ShareName, "Index", new { sortOrder = ViewBag.NameSortParam, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th>
+            @Resources.CmdbCi
+        </th>
+        <th>
+            @Resources.UncPath
+        </th>
+        <th>
+            @Resources.OuSelectList
+        </th>
+        <th>
+            @Resources.ShareOwnerFunctionalArea
+        </th>
+        <th>
+            @Resources.ShareOwnerCostCenter
+        </th>
+        <th>
+            @Resources.OwnerGroup
+        </th>
+        <th>
+            @Resources.ReadOnlyGroup
+        </th>
+        <th>
+            @Resources.ReadWriteGroup
+        </th>
+        <th>
+            @Resources.NoChangeGroup
+        </th>
+        <th>
+            @Resources.Status
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CmdbCi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UncPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ou.ResolverGroup)
+            &#95;
+            @Html.DisplayFor(modelItem => item.Ou.Domain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShareOwnerFunctionalArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShareOwnerCostCenter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OwnerGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReadOnlyGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReadWriteGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoChangeGroup)
+        </td>
+        <td>
+            @StatusExt.AsDisplayString(item.Status.Value)
+        </td>
+        
+        <td>
+            @Html.ActionLink(@Resources.Edit,"Edit", new { id = item.CifsShareID }) |
+            @Html.ActionLink(@Resources.Details, "Details", new { id = item.CifsShareID })@*  |
+    User should take an item out of service, not delete from DB
+        @Html.ActionLink("Delete", "Delete", new { id=item.CifsShareID })
+*@
+        </td>
+    </tr>
+}
+
+</table>
+<br>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))

@@ -1,0 +1,140 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsShare
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CifsShare</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Resources.OuSelectList
+        </dt>
+
+       <dd>
+            @Html.DisplayFor(model => model.Ou.ResolverGroup)
+           &#95;
+            @Html.DisplayFor(model => model.Ou.Domain)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CmdbCi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CmdbCi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UncPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UncPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShareOwnerFunctionalArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShareOwnerFunctionalArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShareOwnerCostCenter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShareOwnerCostCenter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OwnerGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OwnerGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReadOnlyGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReadOnlyGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReadWriteGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReadWriteGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoChangeGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoChangeGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOnDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOnDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CifsShareID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

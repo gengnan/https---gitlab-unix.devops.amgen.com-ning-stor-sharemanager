@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="OnboardingApi" Label="OnboardingApi" Category="Project" />
+    <Node Id="Antlr 3.4.1.9004" Label="Antlr 3.4.1.9004" Category="Package" />
+    <Node Id="bootstrap 3.0.0" Label="bootstrap 3.0.0" Category="Package" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Package" />
+    <Node Id="jQuery 1.10.2" Label="jQuery 1.10.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 5.1.2" Label="Microsoft.AspNet.Mvc 5.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 3.1.2" Label="Microsoft.AspNet.Razor 3.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Web.Optimization 1.1.3" Label="Microsoft.AspNet.Web.Optimization 1.1.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 5.1.2" Label="Microsoft.AspNet.WebApi 5.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.1.2" Label="Microsoft.AspNet.WebApi.Client 5.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.1.2" Label="Microsoft.AspNet.WebApi.Core 5.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.HelpPage 5.1.2" Label="Microsoft.AspNet.WebApi.HelpPage 5.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.1.2" Label="Microsoft.AspNet.WebApi.WebHost 5.1.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 3.1.2" Label="Microsoft.AspNet.WebPages 3.1.2" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Modernizr 2.6.2" Label="Modernizr 2.6.2" Category="Package" />
+    <Node Id="Newtonsoft.Json 5.0.6" Label="Newtonsoft.Json 5.0.6" Category="Package" />
+    <Node Id="Respond 1.2.0" Label="Respond 1.2.0" Category="Package" />
+    <Node Id="WebGrease 1.5.2" Label="WebGrease 1.5.2" Category="Package" />
+    <Node Id="ShareManagerEdgeMvc.Tests" Label="ShareManagerEdgeMvc.Tests" Category="Project" />
+    <Node Id="Microsoft.AspNet.Mvc 5.0.0" Label="Microsoft.AspNet.Mvc 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 3.0.0" Label="Microsoft.AspNet.Razor 3.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 3.0.0" Label="Microsoft.AspNet.WebPages 3.0.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 5.0.6" Label="Newtonsoft.Json 5.0.6" Category="Package" />
+    <Node Id="ShareManagerEdgeMvc" Label="ShareManagerEdgeMvc" Category="Project" />
+    <Node Id="Antlr 3.4.1.9004" Label="Antlr 3.4.1.9004" Category="Package" />
+    <Node Id="bootstrap 3.0.0" Label="bootstrap 3.0.0" Category="Package" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Package" />
+    <Node Id="jQuery 1.10.2" Label="jQuery 1.10.2" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 5.0.0" Label="Microsoft.AspNet.Mvc 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 3.0.0" Label="Microsoft.AspNet.Razor 3.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Web.Optimization 1.1.1" Label="Microsoft.AspNet.Web.Optimization 1.1.1" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 5.0.0" Label="Microsoft.AspNet.WebApi 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.0.0" Label="Microsoft.AspNet.WebApi.Client 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.0.0" Label="Microsoft.AspNet.WebApi.Core 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.0.0" Label="Microsoft.AspNet.WebApi.WebHost 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 3.0.0" Label="Microsoft.AspNet.WebPages 3.0.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Modernizr 2.6.2" Label="Modernizr 2.6.2" Category="Package" />
+    <Node Id="Newtonsoft.Json 5.0.6" Label="Newtonsoft.Json 5.0.6" Category="Package" />
+    <Node Id="PagedList 1.17.0.0" Label="PagedList 1.17.0.0" Category="Package" />
+    <Node Id="PagedList.Mvc 4.5.0.0" Label="PagedList.Mvc 4.5.0.0" Category="Package" />
+    <Node Id="Respond 1.2.0" Label="Respond 1.2.0" Category="Package" />
+    <Node Id="WebGrease 1.5.2" Label="WebGrease 1.5.2" Category="Package" />
+    <Node Id="Resources" Label="Resources" Category="Project" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Mvc 5.0.0" Label="Microsoft.AspNet.Mvc 5.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.Razor 3.0.0" Label="Microsoft.AspNet.Razor 3.0.0" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebPages 3.0.0" Label="Microsoft.AspNet.WebPages 3.0.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="PagedList 1.17.0.0" Label="PagedList 1.17.0.0" Category="Package" />
+    <Node Id="PagedList.Mvc 4.5.0.0" Label="PagedList.Mvc 4.5.0.0" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="bootstrap 3.0.0" Target="jQuery 1.10.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.1.2" Target="Microsoft.AspNet.WebPages 3.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.1.2" Target="Microsoft.AspNet.Razor 3.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.3" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.3" Target="WebGrease 1.5.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 5.1.2" Target="Microsoft.AspNet.WebApi.WebHost 5.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.1.2" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.1.2" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.1.2" Target="Microsoft.AspNet.WebApi.Client 5.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.HelpPage 5.1.2" Target="Microsoft.AspNet.WebApi.WebHost 5.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.HelpPage 5.1.2" Target="Microsoft.AspNet.Mvc 5.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.HelpPage 5.1.2" Target="Microsoft.AspNet.Razor 3.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.1.2" Target="Microsoft.AspNet.WebApi.Core 5.1.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.1.2" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.1.2" Target="Microsoft.AspNet.Razor 3.1.2" Category="Package Dependency" />
+    <Link Source="WebGrease 1.5.2" Target="Antlr 3.4.1.9004" Category="Package Dependency" />
+    <Link Source="WebGrease 1.5.2" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" />
+    <Link Source="OnboardingApi" Target="bootstrap 3.0.0" Category="Installed Package" />
+    <Link Source="OnboardingApi" Target="EntityFramework 6.1.0" Category="Installed Package" />
+    <Link Source="OnboardingApi" Target="Microsoft.AspNet.Web.Optimization 1.1.3" Category="Installed Package" />
+    <Link Source="OnboardingApi" Target="Microsoft.AspNet.WebApi 5.1.2" Category="Installed Package" />
+    <Link Source="OnboardingApi" Target="Microsoft.AspNet.WebApi.HelpPage 5.1.2" Category="Installed Package" />
+    <Link Source="OnboardingApi" Target="Modernizr 2.6.2" Category="Installed Package" />
+    <Link Source="OnboardingApi" Target="Respond 1.2.0" Category="Installed Package" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.WebPages 3.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" />
+    <Link Source="ShareManagerEdgeMvc.Tests" Target="Microsoft.AspNet.Mvc 5.0.0" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc.Tests" Target="Newtonsoft.Json 5.0.6" Category="Installed Package" />
+    <Link Source="bootstrap 3.0.0" Target="jQuery 1.10.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.WebPages 3.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.1" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.1.1" Target="WebGrease 1.5.2" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 5.0.0" Target="Microsoft.AspNet.WebApi.WebHost 5.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.0.0" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.0.0" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.0.0" Target="Microsoft.AspNet.WebApi.Client 5.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.0.0" Target="Microsoft.AspNet.WebApi.Core 5.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" />
+    <Link Source="PagedList.Mvc 4.5.0.0" Target="PagedList 1.17.0.0" Category="Package Dependency" />
+    <Link Source="WebGrease 1.5.2" Target="Antlr 3.4.1.9004" Category="Package Dependency" />
+    <Link Source="WebGrease 1.5.2" Target="Newtonsoft.Json 5.0.6" Category="Package Dependency" />
+    <Link Source="ShareManagerEdgeMvc" Target="bootstrap 3.0.0" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="EntityFramework 6.1.0" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="Microsoft.AspNet.Mvc 5.0.0" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="Microsoft.AspNet.Web.Optimization 1.1.1" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="Microsoft.AspNet.WebApi 5.0.0" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="Modernizr 2.6.2" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="PagedList.Mvc 4.5.0.0" Category="Installed Package" />
+    <Link Source="ShareManagerEdgeMvc" Target="Respond 1.2.0" Category="Installed Package" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.WebPages 3.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.Mvc 5.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebPages 3.0.0" Target="Microsoft.AspNet.Razor 3.0.0" Category="Package Dependency" />
+    <Link Source="PagedList.Mvc 4.5.0.0" Target="PagedList 1.17.0.0" Category="Package Dependency" />
+    <Link Source="Resources" Target="EntityFramework 6.1.0" Category="Installed Package" />
+    <Link Source="Resources" Target="Microsoft.AspNet.Mvc 5.0.0" Category="Installed Package" />
+    <Link Source="Resources" Target="PagedList.Mvc 4.5.0.0" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

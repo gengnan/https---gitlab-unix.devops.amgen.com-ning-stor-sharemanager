@@ -1,0 +1,93 @@
+﻿@model PagedList.IPagedList<ShareManagerEdgeMvc.Models.CifsShare>
+
+@using ShareManagerEdgeMvc.Models;
+
+@using Resources;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>@Resources.SmbShareListHeading</h2>
+
+@using (Html.BeginForm("Index", "SmbShares", FormMethod.Get))
+{
+    <p>
+        Find by keyword: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />&nbsp;&nbsp;
+@Html.ActionLink(@Resources.ClearSearch, "Index")
+    </p>
+}
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.ActionLink(@Resources.ShareName, "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter, page = Model.PageNumber })
+        </th>
+
+        <th>
+            @Html.ActionLink(@Resources.UncPath, "Index", new { sortOrder = ViewBag.UncSortParm, currentFilter = ViewBag.CurrentFilter, page = Model.PageNumber })
+        </th>
+        <th>
+            @Html.ActionLink(@Resources.FunctionName, "Index", new { sortOrder = ViewBag.FuncSortParm, currentFilter = ViewBag.CurrentFilter, page = Model.PageNumber })
+        </th>
+        <th>            
+            @Html.ActionLink(@Resources.CostCenter, "Index", new { sortOrder = ViewBag.CCSortParm, currentFilter = ViewBag.CurrentFilter, page = Model.PageNumber })
+        </th>
+
+        <th>
+            @Html.ActionLink(@Resources.DomainName, "Index", new { sortOrder = ViewBag.DomainSortParm, currentFilter = ViewBag.CurrentFilter, page = Model.PageNumber })
+        </th>    
+        <th>
+            Operations Available
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.UncPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShareOwnerFunctionalArea)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShareOwnerCostCenter)
+        </td>  
+         <td>
+            @Html.DisplayFor(modelItem => item.Ou.Domain)
+
+        </td>     
+  <!--      <td>
+            @StatusExt.AsDisplayString(item.Status.Value)
+        </td>
+  -->      
+        <td>
+            @Html.ActionLink(@Resources.RequestAccess, "UserRequest", "SmbRequest", new { id = item.CifsShareID }, null) | 
+            @*@Html.ActionLink(@Resources.RequestAccess, "Details", new { id=item.CifsShareID }) |*@
+            @Html.ActionLink(Resources.ViewShareDetails, "Details", new { id = item.CifsShareID })
+            
+        </td>
+    </tr>
+}
+
+</table>
+
+@{
+    if (Model.Count == 0)
+    {
+        @Html.Raw(Resources.NotFineYourShare)
+    }
+    <br />
+}
+@*Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount*@
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }), PagedListRenderOptions.ClassicPlusFirstAndLast)

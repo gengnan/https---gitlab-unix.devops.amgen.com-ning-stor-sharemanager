@@ -1,0 +1,169 @@
+﻿@model IEnumerable<ShareManagerEdgeMvc.Models.CifsPermissionRequest>
+@using ShareManagerEdgeMvc.Models;
+@using ShareManagerEdgeMvc.Helpers;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Resources.MyRequests</h2>
+
+<h4>@Resources.OpenRequestsHeading</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CifsShare.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestStatus)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.RequestOpenedOnDateTime)
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CifsShare.Name)
+        </td>
+        <td>
+            @RequestTypeExt.AsDisplayString(item.RequestType.Value)
+        </td>
+        <td>
+            @PermissionTypeExt.AsDisplayString(item.PermissionType.Value)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestJustification)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedForUserName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestedByUserName)
+        </td>
+        <td>
+            @RequestStatusExt.AsDisplayString(item.RequestStatus.Value)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.RequestOpenedOnDateTime)
+        </td>
+        
+       
+        <td>
+            @*@Html.ActionLink(@Resources.Modify, "Edit", new { id=item.CifsPermissionRequestID }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id=item.CifsPermissionRequestID }) |*@
+            @Html.ActionLink(@Resources.Cancel, "Delete", new { id=item.CifsPermissionRequestID }) |
+            @Html.ActionLink(@Resources.ReNotify, "Remind", new { id=item.CifsPermissionRequestID })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+<br />
+<br />
+
+<h4>@Resources.CompletedRequests</h4>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CifsShare.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </th>
+        <th>
+            @Resources.RequestApprovalStatus
+        </th>
+        <th>@Resources.RequestStatusMsg</th>
+        <th>
+            @Resources.RequestClosedOnDateTime
+        </th>
+
+        
+    </tr>
+    @foreach (var item in ViewData["CompletedRequests"] as List<ShareManagerEdgeMvc.Models.CifsPermissionRequest>)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CifsShare.Name)
+            </td>
+            <td>
+                @RequestTypeExt.AsDisplayString(item.RequestType.Value)
+            </td>
+            <td>
+                @PermissionTypeExt.AsDisplayString(item.PermissionType.Value)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestJustification)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestedForUserName)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestedByUserName)
+            </td>
+            <td>
+                @RequestApprovalStatusExt2.AsDisplayString(item.RequestApprovalStatus.Value)
+            </td>
+            <td>@Html.DisplayFor(modelItem => item.RequestStatusMsg)</td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestClosedOnDateTime)
+            </td>
+
+
+            
+        </tr>
+    }
+
+</table>
+
+
+<p>
+    @Html.ActionLink(@Resources.HomeLinkText, "Index", "Home", new { area = ""}, null)
+</p>

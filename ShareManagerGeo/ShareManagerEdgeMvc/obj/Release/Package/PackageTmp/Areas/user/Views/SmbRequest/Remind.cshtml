@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Notify Approvers";
+
+    var email = ViewBag.Email;
+}
+
+<h2>@ViewBag.Title.</h2>
+
+@{
+    if (email)
+    {
+        <p>@Resources.ReNotifyConfirmed</p>
+    }
+    else
+    {
+        <p>@Resources.ReNotifyNotConfirmed</p>
+    }
+
+}
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

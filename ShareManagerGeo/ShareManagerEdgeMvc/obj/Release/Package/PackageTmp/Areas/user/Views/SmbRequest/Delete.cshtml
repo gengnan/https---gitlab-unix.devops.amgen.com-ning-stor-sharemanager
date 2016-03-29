@@ -1,0 +1,148 @@
+﻿@model ShareManagerEdgeMvc.Models.CifsPermissionRequest
+@using ShareManagerEdgeMvc.Models;
+@using ShareManagerEdgeMvc.Helpers;
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var share = ViewBag.CifsShare as ShareManagerEdgeMvc.Models.CifsShare;
+}
+
+
+<h2>@Resources.Cancel @Resources.Request</h2>
+<div>
+    <h4>@Resources.SmbShare</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Resources.ShareName
+        </dt>
+
+        <dd>
+            @share.Name
+        </dd>
+        <dt>
+            @Resources.ShareOwner
+        </dt>
+
+        <dd>
+            @share.Ou.ResolverGroup
+            &#95;
+            @share.Ou.Domain
+        </dd>
+        <dt>
+            @Resources.CmdbCi
+        </dt>
+        <dd>
+            @share.CmdbCi
+        </dd>
+
+        <dt>
+            @Resources.UncPath
+        </dt>
+
+        <dd>
+            @share.UncPath
+        </dd>
+        <dt>
+            @share.Status
+        </dt>
+
+        <dd>
+            @StatusExt.AsDisplayString(@share.Status.Value)
+        </dd>
+
+        <dt>
+            @Resources.CreatedOnDateTime
+        </dt>
+
+        <dd>
+            @share.CreatedOnDateTime
+        </dd>
+
+
+
+
+
+    </dl>
+</div>
+<br />
+<div>
+    <h4>@Resources.RequestDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestType)
+        </dt>
+
+        <dd>
+            @RequestTypeExt.AsDisplayString(Model.RequestType.Value)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PermissionType)
+        </dt>
+
+        <dd>
+            @PermissionTypeExt.AsDisplayString(Model.PermissionType.Value)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestJustification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestJustification)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedForUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedForUserName)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestedByUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestedByUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestStatus)
+        </dd>
+
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestOpenedOnDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestOpenedOnDateTime)
+        </dd>
+
+        
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Resources.Cancel @Resources.Request" class="btn btn-default" /> |
+            @Html.ActionLink(@Resources.BackToMyRequests, "Index")
+        </div>
+    }
+</div>

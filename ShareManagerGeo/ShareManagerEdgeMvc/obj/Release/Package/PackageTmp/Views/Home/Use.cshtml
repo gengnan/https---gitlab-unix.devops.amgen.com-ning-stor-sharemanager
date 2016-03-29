@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = @Resources.UseLinkText;
+}
+
+<h2>How to Start</h2>
+
+<p>@Html.Raw(Resources.UsePageReference)</p>
+
+<h3>@Html.Raw(Resources.UsePageRequestAccess)</h3>
+<p><img src="@Url.Content("~/Content/request1.png")" alt="Request Step1" style="padding: 5px;width:80%;"></p>
+<p><img src="@Url.Content("~/Content/request2.png")" alt="Request Step2" style="padding: 5px;width:80%;"></p>
+<p><img src="@Url.Content("~/Content/request3.png")" alt="Request Step3" style="padding: 5px;width:80%;"></p>
+<h3>@Html.Raw(Resources.UsePageApproveAccess)</h3>
+<p><img src="@Url.Content("~/Content/approval1.png")" alt="Approval Step1" style="padding: 5px;width:80%;"></p>
+<p><img src="@Url.Content("~/Content/approval2.png")" alt="Approval Step2" style="padding: 5px;width:80%;"></p>

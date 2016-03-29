@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutLinkText" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="AboutPageContent" xml:space="preserve">
+    <value>La aplicación Share Manager fue diseñada y desarrollada para reemplazar la antigua aplicación ASP GateKeeper la cual ha llegado su Fin de Vida. Estamos trabajando fuertemente en asegurar a nuestros clientes calidad de servicio y experiencia.</value>
+  </data>
+  <data name="SmbAdminContent" xml:space="preserve">
+    <value>Si eres un Administrador de SMB, oprima aquí debajo para ir al área de Administración de SMB y para añadir nuevos shares de SMB en Share Manager o para manejar shares de SMB existentes.</value>
+  </data>
+  <data name="SmbAdminHeading" xml:space="preserve">
+    <value>Administradores de SMB</value>
+  </data>
+  <data name="AliasesList" xml:space="preserve">
+    <value>Listado delimitado por punto y coma de credenciales de Windows login</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Share Manager</value>
+  </data>
+  <data name="ChooseYourLanguage" xml:space="preserve">
+    <value>Escoja el idioma preferido</value>
+  </data>
+  <data name="CmdbCi" xml:space="preserve">
+    <value>CMDB CI</value>
+  </data>
+  <data name="CmdbCiRequired" xml:space="preserve">
+    <value>CMDB CI es requerido</value>
+  </data>
+  <data name="ContactLinkText" xml:space="preserve">
+    <value>Contacto</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contáctenos</value>
+  </data>
+  <data name="CopyRightBy" xml:space="preserve">
+    <value>AHS - Backup y Almacenamiento</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Creado por</value>
+  </data>
+  <data name="CreatedOnDateTime" xml:space="preserve">
+    <value>Creado en</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Correo electrónico es requerido</value>
+  </data>
+  <data name="GettingStartedContent" xml:space="preserve">
+    <value>Bienvenidos al portal Share Manager. Este es su lugar para manejar los shares SMB.</value>
+  </data>
+  <data name="GettingStartedHeading" xml:space="preserve">
+    <value>Comienzo</value>
+  </data>
+  <data name="HomeLinkText" xml:space="preserve">
+    <value>Página de inicio</value>
+  </data>
+  <data name="ModifiedBy" xml:space="preserve">
+    <value>Última Modificación por</value>
+  </data>
+  <data name="ModifiedOnDateTime" xml:space="preserve">
+    <value>Última Modificación en</value>
+  </data>
+  <data name="NoChangeGroup" xml:space="preserve">
+    <value>Grupo No Cambios</value>
+  </data>
+  <data name="OneFiftyLength" xml:space="preserve">
+    <value>Debe ser menos de 150 caracteres</value>
+  </data>
+  <data name="OrganizationalUnit" xml:space="preserve">
+    <value>Unidad Organizacional</value>
+  </data>
+  <data name="OrganizationalUnitRequired" xml:space="preserve">
+    <value>Unidad Organizacional es requerida</value>
+  </data>
+  <data name="OuSelectList" xml:space="preserve">
+    <value>OU (Resolver Group - Domain)</value>
+  </data>
+  <data name="OwnerGroup" xml:space="preserve">
+    <value>Grupo del Dueño</value>
+  </data>
+  <data name="OwnerGroupRequired" xml:space="preserve">
+    <value>Grupo del Dueño es requerido</value>
+  </data>
+  <data name="ReadOnlyGroup" xml:space="preserve">
+    <value>Grupo Read Only</value>
+  </data>
+  <data name="ReadOnlyGroupRequired" xml:space="preserve">
+    <value>Grupo Read Only es requerido</value>
+  </data>
+  <data name="ReadWriteGroup" xml:space="preserve">
+    <value>Grupo Read/Write</value>
+  </data>
+  <data name="ReadWriteGroupRequired" xml:space="preserve">
+    <value>Grupo de Seguridad Read/Write es requerido</value>
+  </data>
+  <data name="ResolverGroup" xml:space="preserve">
+    <value>Grupo de Resolver</value>
+  </data>
+  <data name="ResolverGroupRequired" xml:space="preserve">
+    <value>Grupo de Resolver es requerido</value>
+  </data>
+  <data name="SelectListNull" xml:space="preserve">
+    <value>-- Seleccione un Artículo --</value>
+  </data>
+  <data name="SeventyFiveLength" xml:space="preserve">
+    <value>Debe ser menos de 75 caracteres</value>
+  </data>
+  <data name="ShareAdminIndexPageTitle" xml:space="preserve">
+    <value>Listado de Share Administration</value>
+  </data>
+  <data name="ShareDomain" xml:space="preserve">
+    <value>Dominio AD</value>
+  </data>
+  <data name="ShareName" xml:space="preserve">
+    <value>Nombre del Share</value>
+  </data>
+  <data name="ShareNameRequired" xml:space="preserve">
+    <value>Nombre del Share es requerido</value>
+  </data>
+  <data name="ShareOwner" xml:space="preserve">
+    <value>Dueño</value>
+  </data>
+  <data name="ShareOwnerCostCenter" xml:space="preserve">
+    <value>Cost Center del Dueño</value>
+  </data>
+  <data name="ShareOwnerCostCenterRequired" xml:space="preserve">
+    <value>Cost Center del Dueño es requerido</value>
+  </data>
+  <data name="ShareOwnerFunctionalArea" xml:space="preserve">
+    <value>Dueño del Área Funcional</value>
+  </data>
+  <data name="ShareOwnerFunctionalAreaRequired" xml:space="preserve">
+    <value>Dueño del Área Funcional es requerido</value>
+  </data>
+  <data name="ShareUsersContent" xml:space="preserve">
+    <value>Vea el listado de Shares a los que puede pedir acceso. Para dueños de share, busque los shares que usted maneja, aprueba o rechaza solicitudes de permisos.</value>
+  </data>
+  <data name="ShareUsersHeading" xml:space="preserve">
+    <value>SMB Shares</value>
+  </data>
+  <data name="SixtyFourLength" xml:space="preserve">
+    <value>Debe ser menos de 65 caracteres</value>
+  </data>
+  <data name="TwentyFiveLength" xml:space="preserve">
+    <value>Debe ser menos de 25 caracteres</value>
+  </data>
+  <data name="TwoFiftyLength" xml:space="preserve">
+    <value>Debe ser menos de 250 caracteres</value>
+  </data>
+  <data name="UncPath" xml:space="preserve">
+    <value>UNC Path (Ruta de Acceso)</value>
+  </data>
+  <data name="UncPathRequired" xml:space="preserve">
+    <value>UNC Path es requerido</value>
+  </data>
+  <data name="UserAlias" xml:space="preserve">
+    <value>Alias del Usuario (Windows Login)</value>
+  </data>
+  <data name="UserAliasRequired" xml:space="preserve">
+    <value>Alias del Usuario es requerido</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nombre de Usuario</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>Nombre de Usuario es requerido</value>
+  </data>
+  <data name="WelcomeHeading" xml:space="preserve">
+    <value>Bienvenido</value>
+  </data>
+  <data name="YammerContactLoginHeading" xml:space="preserve">
+    <value>Puede hacer Login aquí debajo para Ver o Enviar un Mensaje a nuestro AHS - Storage and Backup Yammer Group. Si ya ha iniciado una sesión. Usted puede ver nuestro feed para AHS - Storage and Backup Yammer.</value>
+  </data>
+  <data name="YammerEmailHeading" xml:space="preserve">
+    <value>Escriba un mensaje a nuestro Yammer Group usando el correo electrónico:</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Crear Nuevo</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="AddNew" xml:space="preserve">
+    <value>Añadir Nuevo</value>
+  </data>
+  <data name="AddNewShare" xml:space="preserve">
+    <value>Añadir Nuevo Share</value>
+  </data>
+  <data name="ClearSearch" xml:space="preserve">
+    <value>Borrar Búsqueda</value>
+  </data>
+  <data name="FindByName" xml:space="preserve">
+    <value>Buscar por nombre:</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="OneHundredLength" xml:space="preserve">
+    <value>Debe ser menos de 100 caracteres</value>
+  </data>
+  <data name="TenTwentyFourLength" xml:space="preserve">
+    <value>Debe ser menos de 1024 caracteres</value>
+  </data>
+  <data name="SmbShareListHeading" xml:space="preserve">
+    <value>SMB Shares</value>
+  </data>
+  <data name="SmbSharePermListPageHeader" xml:space="preserve">
+    <value>Página de permisos a SMB Shares</value>
+  </data>
+  <data name="PermissionType" xml:space="preserve">
+    <value>Permiso Requerido</value>
+  </data>
+  <data name="RequestAccess" xml:space="preserve">
+    <value>Solicitar Acceso</value>
+  </data>
+  <data name="RequestedByUserName" xml:space="preserve">
+    <value>Solicitud Sometida por</value>
+  </data>
+  <data name="RequestedForUserName" xml:space="preserve">
+    <value>Solicitada para</value>
+  </data>
+  <data name="RequestJustification" xml:space="preserve">
+    <value>Justificación de Solicitud</value>
+  </data>
+  <data name="RequestJustificationRequired" xml:space="preserve">
+    <value>Una Justificación de Solicitud es requerida</value>
+  </data>
+  <data name="RequestOpenedOnDateTime" xml:space="preserve">
+    <value>Solicitud Sometida en</value>
+  </data>
+  <data name="RequestStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="RequestStatusMsg" xml:space="preserve">
+    <value>Mensaje de Status</value>
+  </data>
+  <data name="RequestType" xml:space="preserve">
+    <value>Añadir o Remover</value>
+  </data>
+  <data name="OpenRequestCountHeading" xml:space="preserve">
+    <value>Solicitada por Alias de Usuario</value>
+  </data>
+  <data name="RequestedForUserAlias" xml:space="preserve">
+    <value>Solicitada para Alias de Usuario</value>
+  </data>
+  <data name="OpenRequestsHeading" xml:space="preserve">
+    <value>Solicitudes abiertas</value>
+  </data>
+  <data name="NoOpenRequestContent" xml:space="preserve">
+    <value>Usted NO tiene solicitudes abiertas o sometidas por usted, o sometidas en favor suyo.</value>
+  </data>
+  <data name="OpenRequestContent" xml:space="preserve">
+    <value>Usted tiene las siguientes solicitudes que usted ha sometido o fueron sometidas en favor suyo.</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Página</value>
+  </data>
+  <data name="SearchByNameCiOrPath" xml:space="preserve">
+    <value>Búsqueda por(Nombre, UNC Path, o CMDB CI):</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="BothAdmin" xml:space="preserve">
+    <value>Administrador de Share y Storage</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completado</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Fallido</value>
+  </data>
+  <data name="GK" xml:space="preserve">
+    <value>Dueño/Persona que Aprueba</value>
+  </data>
+  <data name="InService" xml:space="preserve">
+    <value>En Servicio</value>
+  </data>
+  <data name="NC" xml:space="preserve">
+    <value>No Cambio</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Desconectado</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Abierto</value>
+  </data>
+  <data name="OutOfService" xml:space="preserve">
+    <value>Fuera de Servicio</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="Retired" xml:space="preserve">
+    <value>Retirado</value>
+  </data>
+  <data name="RO" xml:space="preserve">
+    <value>Read Only</value>
+  </data>
+  <data name="RW" xml:space="preserve">
+    <value>Read/Write</value>
+  </data>
+  <data name="ShareAdmin" xml:space="preserve">
+    <value>Administrador de Share</value>
+  </data>
+  <data name="SiteAdmin" xml:space="preserve">
+    <value>Administrador de Sitio</value>
+  </data>
+  <data name="StorageAdmin" xml:space="preserve">
+    <value>Administrador de Storage</value>
+  </data>
+  <data name="NoRequestCountContent" xml:space="preserve">
+    <value>Actualmente usted no tiene una solicitud de permiso abierta.</value>
+  </data>
+  <data name="NoRequestCountHeading" xml:space="preserve">
+    <value>Solicitudes No Abiertas</value>
+  </data>
+  <data name="OpenRequestCountContent1" xml:space="preserve">
+    <value>Usted Tiene</value>
+  </data>
+  <data name="OpenRequestCountContent2" xml:space="preserve">
+    <value>solicitud(es) pendientes. </value>
+  </data>
+  <data name="RequestCountHeading" xml:space="preserve">
+    <value>Usted Tiene Solicitudes Abiertas</value>
+  </data>
+  <data name="RequestedByUserAlias" xml:space="preserve">
+    <value>Requerida por Alias de Usuario</value>
+  </data>
+  <data name="UnknownItem" xml:space="preserve">
+    <value>Artículo desconocido</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Modify" xml:space="preserve">
+    <value>Modificar</value>
+  </data>
+  <data name="RequestClosedOnDateTime" xml:space="preserve">
+    <value>Solicitud cerrada en</value>
+  </data>
+  <data name="CreateNewRequestButton" xml:space="preserve">
+    <value>Crear Solicitud de Nuevo Acceso</value>
+  </data>
+  <data name="EnterKeyDisabled" xml:space="preserve">
+    <value>La tecla de ENTER está desactivada en esta página.</value>
+  </data>
+  <data name="OneAlias" xml:space="preserve">
+    <value>Solamente un Alias por Solicitud es apoyada en este momento.</value>
+  </data>
+  <data name="SmbShare" xml:space="preserve">
+    <value>SMB Share</value>
+  </data>
+  <data name="SmbShareOpenRequests" xml:space="preserve">
+    <value>Solicitudes abiertas para este Share</value>
+  </data>
+  <data name="SubmitRequest" xml:space="preserve">
+    <value>Someter Solicitud</value>
+  </data>
+  <data name="Denied" xml:space="preserve">
+    <value>Solicitud Denegada</value>
+  </data>
+  <data name="BrowseAvailableShares" xml:space="preserve">
+    <value>Shares disponibles para ver</value>
+  </data>
+  <data name="CompletedRequests" xml:space="preserve">
+    <value>Solicitudes Completadas</value>
+  </data>
+  <data name="MyRequests" xml:space="preserve">
+    <value>Mis Solicitudes</value>
+  </data>
+  <data name="OpenRequestLink" xml:space="preserve">
+    <value>Ver mis solicitudes</value>
+  </data>
+  <data name="ClosedBy" xml:space="preserve">
+    <value>Cerrado por</value>
+  </data>
+  <data name="AdHelperErrorMsg" xml:space="preserve">
+    <value>Mensaje de error de AD Helper</value>
+  </data>
+  <data name="AndApproveOrDenyRequest" xml:space="preserve">
+    <value>y aprobar o denegar esta solicitud.</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Aprobado</value>
+  </data>
+  <data name="ApproveDenyRequestPageHeading" xml:space="preserve">
+    <value>Aprobar o Denegar Solicitud</value>
+  </data>
+  <data name="ApproveRequest" xml:space="preserve">
+    <value>Aprobar Solicitud</value>
+  </data>
+  <data name="DenyRequest" xml:space="preserve">
+    <value>Denegar Solicitud</value>
+  </data>
+  <data name="EmailClosingP1" xml:space="preserve">
+    <value>Para la última información de este share y para verificar sus permisos. </value>
+  </data>
+  <data name="EmailClosingP2" xml:space="preserve">
+    <value>&lt;p&gt;Si tiene problemas con sus permisos, por favor abra una Solicitud de servicio en &lt;a href=\"https://amgen.service-now.com/navpage.do\"&gt;ISM-SN&lt;/a&gt; a</value>
+  </data>
+  <data name="EmailClosingP3" xml:space="preserve">
+    <value>para que pueda ser vista su situación.&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;&lt;p&gt;Thank you,&lt;/br&gt;Del Equipo Share Manager&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="ForLowerCase" xml:space="preserve">
+    <value>para</value>
+  </data>
+  <data name="PleaseGoTo" xml:space="preserve">
+    <value>Favor de ir a</value>
+  </data>
+  <data name="RequestApprovalStatus" xml:space="preserve">
+    <value>Aprobar/Denegar</value>
+  </data>
+  <data name="RequestApproved" xml:space="preserve">
+    <value>Solicitud Aprobada</value>
+  </data>
+  <data name="RequestCompleted" xml:space="preserve">
+    <value>Solicitud Completada</value>
+  </data>
+  <data name="RequestCompletedEmail" xml:space="preserve">
+    <value>La siguiente Solicitud fue completada:</value>
+  </data>
+  <data name="RequestDenied" xml:space="preserve">
+    <value>Solicitud Denegada</value>
+  </data>
+  <data name="RequestDetails" xml:space="preserve">
+    <value>Detalles de la Solicitud</value>
+  </data>
+  <data name="RequestMade" xml:space="preserve">
+    <value>La siguiente Solicitud ha sido hecha:</value>
+  </data>
+  <data name="RequestPending" xml:space="preserve">
+    <value>Solicitud pendiente de</value>
+  </data>
+  <data name="StatusNotificationTextBox" xml:space="preserve">
+    <value>Notificación al usuario del estado de la Solicitud</value>
+  </data>
+  <data name="StatusNotificationTextBoxExplanation" xml:space="preserve">
+    <value>Si desea notificar al usuario porqué su solicitud fue denegada, use el encasillado de texto provisto:</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Someter</value>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>Gracias,&lt;/br&gt;Del equipo Share Manager</value>
+  </data>
+  <data name="ViewShareDetails" xml:space="preserve">
+    <value>Ver Detalles del Share</value>
+  </data>
+  <data name="BackToShareDetails" xml:space="preserve">
+    <value>Regreso a Detalles del Share</value>
+  </data>
+  <data name="BackToSharesList" xml:space="preserve">
+    <value>Regreso a Listado de Shares</value>
+  </data>
+  <data name="NcMembers" xml:space="preserve">
+    <value>No Cambios (No Modificaciones) Miembros Share</value>
+  </data>
+  <data name="NoCompletedRequestsForShare" xml:space="preserve">
+    <value>No hay solicitudes completadas o fallidas para este share.</value>
+  </data>
+  <data name="OwnersMembers" xml:space="preserve">
+    <value>Dueños de Share (Persona que aprueba la Solicitud)</value>
+  </data>
+  <data name="RoMembers" xml:space="preserve">
+    <value>Miembros de Share Read Only</value>
+  </data>
+  <data name="RwMembers" xml:space="preserve">
+    <value>Miembros de Share Read/Write</value>
+  </data>
+  <data name="ShareDetails" xml:space="preserve">
+    <value>Detalles de Share</value>
+  </data>
+  <data name="SharesList" xml:space="preserve">
+    <value>Listado de Shares</value>
+  </data>
+  <data name="ShareUserDetailsPageHeader" xml:space="preserve">
+    <value>Detalles de Share y Solicitudes de Acceso</value>
+  </data>
+  <data name="ShareUserDetailsPageTopContent" xml:space="preserve">
+    <value>Desplazar hacia abajo para ver Dueños y Usuarios actuales con acceso, al igual que Solicitudes Abiertas y Solicitudes Completadas.</value>
+  </data>
+  <data name="ToSharesList" xml:space="preserve">
+    <value>Hacia Listado de Shares</value>
+  </data>
+  <data name="BackToMyRequests" xml:space="preserve">
+    <value>Regresar a Mis Solicitudes</value>
+  </data>
+  <data name="Cancelled" xml:space="preserve">
+    <value>Cancelado</value>
+  </data>
+  <data name="CancelRequest" xml:space="preserve">
+    <value>Cancelar Solicitud</value>
+  </data>
+  <data name="Request" xml:space="preserve">
+    <value>Solicitud</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Guardar Cambios</value>
+  </data>
+  <data name="AttemptAddUserWhoAlreadyHasAccess" xml:space="preserve">
+    <value>Ha intentado solicitar acceso para un usuario que ya tiene el acceso solicitado.</value>
+  </data>
+  <data name="AttemptError" xml:space="preserve">
+    <value>La solicitud sometida es inválida. Una de las siguientes condiciones causó el error:</value>
+  </data>
+  <data name="AttemptIdenticalRequest" xml:space="preserve">
+    <value>Usted ha intentado crear una solicitud idéntica.</value>
+  </data>
+  <data name="AttemptRemoveForNonMember" xml:space="preserve">
+    <value>Usted ha intentado solicitar remover a un usuario que no tiene los permisos que desea remover.</value>
+  </data>
+  <data name="RequestApprovalNotificationTimeStamp" xml:space="preserve">
+    <value>Última Notificación de Solicitud enviada en</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Permission</value>
+  </data>
+  <data name="Security Group" xml:space="preserve">
+    <value>Security Group</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserOrGroup" xml:space="preserve">
+    <value>User or  Security Group</value>
+  </data>
+  <data name="SecurityGroupMembers" xml:space="preserve">
+    <value>Security Group Members</value>
+  </data>
+  <data name="IsFsrShare" xml:space="preserve">
+    <value>File Share Registry?</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ParentShare" xml:space="preserve">
+    <value>Parent Share</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="AttemptInvalidRequest" xml:space="preserve">
+    <value>UserName not valid.</value>
+  </data>
+</root>
